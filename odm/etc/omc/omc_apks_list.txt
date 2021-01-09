@@ -1,0 +1,6 @@
+/odm/app/MyGalaxyWidget/MyGalaxyWidget.apk
+/odm/app/MyGalaxyWidget_NEBANGS/MyGalaxyWidget_NEBANGS.apk
+/odm/app/Nebangs_mygalaxy_3.0/Nebangs_mygalaxy_3.0.apk
+/odm/app/SamsungMax/SamsungMax.apk
+/odm/priv-app/appcloud_oobe/appcloud_oobe.apk
+/odm/priv-app/Shopstub-release/Shopstub-release.apk
