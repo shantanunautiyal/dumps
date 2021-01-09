@@ -1,0 +1,6 @@
+<permissions>
+    <!-- zhangwei1@realmeUI, 2019/12/03, Add for realme Lab. -->
+    <feature name="realme.laboratory.support"/>
+    <!--zhanjiang.Tan@realmeUI, 2020/4/21, Add for show vooc logo-->
+    <feature name="realme.support.show.vooc.logo" />
+</permissions>

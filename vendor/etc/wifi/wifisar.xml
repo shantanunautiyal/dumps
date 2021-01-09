@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wifisar>
+    <project name="19666">
+        <region name="VN" has_only_gsm="false">
+            <wifi_head_sar>1</wifi_head_sar>
+            <wifi_body_sar>2</wifi_body_sar>
+            <gsm_wifi_head_sar>3</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>4</gsm_wifi_body_sar>
+        </region>
+        <region name="ALL" has_only_gsm="false">
+            <wifi_head_sar>5</wifi_head_sar>
+            <wifi_body_sar>6</wifi_body_sar>
+            <gsm_wifi_head_sar>7</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>8</gsm_wifi_body_sar>
+        </region>
+    </project>
+    <project name="19667">
+        <region name="VN" has_only_gsm="false">
+            <wifi_head_sar>1</wifi_head_sar>
+            <wifi_body_sar>2</wifi_body_sar>
+            <gsm_wifi_head_sar>3</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>4</gsm_wifi_body_sar>
+        </region>
+        <region name="ALL" has_only_gsm="false">
+            <wifi_head_sar>5</wifi_head_sar>
+            <wifi_body_sar>6</wifi_body_sar>
+            <gsm_wifi_head_sar>7</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>8</gsm_wifi_body_sar>
+        </region>
+    </project>
+    <project name="19668">
+        <region name="VN" has_only_gsm="false">
+            <wifi_head_sar>1</wifi_head_sar>
+            <wifi_body_sar>2</wifi_body_sar>
+            <gsm_wifi_head_sar>3</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>4</gsm_wifi_body_sar>
+        </region>
+        <region name="ALL" has_only_gsm="false">
+            <wifi_head_sar>5</wifi_head_sar>
+            <wifi_body_sar>6</wifi_body_sar>
+            <gsm_wifi_head_sar>7</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>8</gsm_wifi_body_sar>
+        </region>
+    </project>
+    <project name="19616">
+        <region name="VN" has_only_gsm="false">
+            <wifi_head_sar>1</wifi_head_sar>
+            <wifi_body_sar>2</wifi_body_sar>
+            <gsm_wifi_head_sar>3</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>4</gsm_wifi_body_sar>
+        </region>
+        <region name="ALL" has_only_gsm="false">
+            <wifi_head_sar>5</wifi_head_sar>
+            <wifi_body_sar>6</wifi_body_sar>
+            <gsm_wifi_head_sar>7</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>8</gsm_wifi_body_sar>
+        </region>
+    </project>
+    <project name="19661">
+        <region name="IN" has_only_gsm="false">
+            <wifi_head_sar>13</wifi_head_sar>
+            <wifi_body_sar>0</wifi_body_sar>
+            <gsm_wifi_head_sar>14</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>0</gsm_wifi_body_sar>
+        </region>
+        <region name="ALL" has_only_gsm="false">
+            <wifi_head_sar>9</wifi_head_sar>
+            <wifi_body_sar>10</wifi_body_sar>
+            <gsm_wifi_head_sar>11</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>12</gsm_wifi_body_sar>
+        </region>
+    </project>
+    <project name="19663">
+        <region name="IN" has_only_gsm="false">
+            <wifi_head_sar>13</wifi_head_sar>
+            <wifi_body_sar>0</wifi_body_sar>
+            <gsm_wifi_head_sar>14</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>0</gsm_wifi_body_sar>
+        </region>
+        <region name="ALL" has_only_gsm="false">
+            <wifi_head_sar>9</wifi_head_sar>
+            <wifi_body_sar>10</wifi_body_sar>
+            <gsm_wifi_head_sar>11</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>12</gsm_wifi_body_sar>
+        </region>
+    </project>
+    <project name="19662">
+        <region name="EUEX" has_only_gsm="false">
+            <wifi_head_sar>19</wifi_head_sar>
+            <wifi_body_sar>20</wifi_body_sar>
+            <gsm_wifi_head_sar>21</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>22</gsm_wifi_body_sar>
+        </region>
+        <region name="ALL" has_only_gsm="false">
+            <wifi_head_sar>15</wifi_head_sar>
+            <wifi_body_sar>16</wifi_body_sar>
+            <gsm_wifi_head_sar>17</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>18</gsm_wifi_body_sar>
+        </region>
+    </project>
+    <project name="19665">
+        <region name="EUEX" has_only_gsm="false">
+            <wifi_head_sar>19</wifi_head_sar>
+            <wifi_body_sar>20</wifi_body_sar>
+            <gsm_wifi_head_sar>21</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>22</gsm_wifi_body_sar>
+        </region>
+        <region name="ALL" has_only_gsm="false">
+            <wifi_head_sar>15</wifi_head_sar>
+            <wifi_body_sar>16</wifi_body_sar>
+            <gsm_wifi_head_sar>17</gsm_wifi_head_sar>
+            <gsm_wifi_body_sar>18</gsm_wifi_body_sar>
+        </region>
+    </project>
+</wifisar>
