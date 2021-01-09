@@ -1,0 +1,1 @@
+{"modelName":"SM-A405FN","multiCsc":"OXM","salesCode":"ATO","osCode":"PP","version":"GRASSE_AR_SM-A405FN_ATO_NONE_PP_0002","networkCharge":"charge","networkBearer":"all","optionalApp":"checked","app":[{"appId":"b2b.hrs.android.lib","appName":"HRS_Partner_ID","mode":"optional"},{"appId":"com.hrs.b2c.android","appName":"HRS","mode":"optional"}],"resource":[]}

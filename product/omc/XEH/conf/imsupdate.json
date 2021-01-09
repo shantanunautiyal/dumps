@@ -1,0 +1,56 @@
+{
+  "update_version": 1,
+  "note": "Set legacy_latching True to vodafone up profiles in globalsettings.json",
+  "imsprofile_update": {
+    "profile": [
+    ],
+    "remove_profile": [
+    ]
+  },
+  "globalsettings_update": {
+    "defaultsetting": {
+    },
+    "nohitsetting": {
+    },
+    "globalsetting": [
+    {
+      "mnoname": "Vodafone_CZ",
+      "legacy_latching": true
+    },
+    {
+      "mnoname": "Vodafone_GR",
+      "legacy_latching": true
+    },
+    {
+      "mnoname": "Vodafone_HU",
+      "legacy_latching": true
+    },
+    {
+      "mnoname": "Vodafone_IE",
+      "legacy_latching": true
+    },
+    {
+      "mnoname": "Vodafone_IT",
+      "legacy_latching": true
+    },
+    {
+      "mnoname": "Vodafone_RO",
+      "legacy_latching": true
+    },
+    {
+      "mnoname": "Vodafone_PT",
+      "legacy_latching": true
+    },
+    {
+      "mnoname": "Vodafone_AL",
+      "legacy_latching": true
+    }
+    ]
+  },
+  "mnomap_update": {
+    "remove_mnomap": [
+    ],
+    "add_mnomap": [
+    ]
+  }
+}

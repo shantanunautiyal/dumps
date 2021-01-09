@@ -1,0 +1,5 @@
+ro.omc.build.version=A405FNOXM3BTG1
+ro.omc.build.id=32857017
+ro.omc.changetype=DATA_RESET_ON,TRUE
+ro.simbased.changetype=NO_DFLT_CSC,OMC
+ro.omc.disabler=FALSE

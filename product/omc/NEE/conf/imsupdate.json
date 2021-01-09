@@ -1,0 +1,22 @@
+{
+  "update_version": 1,
+  "min_swver": "",
+  "note": "VoLTE Roaming Enabled for Telia NO/SE",
+  "imsprofile_update": {
+    "profile": [
+      {
+        "name": "Telia Norway Volte",
+        "mnoname": "Telia_NO",
+        "support_roaming": true
+      },
+      { 
+        "name": "S Telia VoLTE",
+        "mnoname": "Telia_SE",
+        "support_roaming": true
+      }
+    ],
+    "remove_profile": [
+    ]
+  }
+}
+

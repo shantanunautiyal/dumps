@@ -1,0 +1,2 @@
+/product/priv-app/appcloud_oobe_samsungGlobal-release_V3.18.2.1/appcloud_oobe_samsungGlobal-release_V3.18.2.1.apk
+/product/priv-app/Ignite-samsungSamsungAgent_6.3.087-5111_release/Ignite-samsungSamsungAgent_6.3.087-5111_release.apk
