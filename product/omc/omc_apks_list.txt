@@ -1,0 +1,3 @@
+/product/app/SamsungMax/SamsungMax.apk
+/product/app/UserManual/UserManual.apk
+/product/priv-app/com.dti.samsung_Ignite/com.dti.samsung_Ignite.apk
