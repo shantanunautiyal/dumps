@@ -1,0 +1,2 @@
+/hidden/app/PhonePe.apk
+/hidden/app/snapchat_samsung_xxhdpi.apk
