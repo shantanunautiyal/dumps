@@ -1,0 +1,14 @@
+<!-- This file is used by Multimedia Daemon Service (YaJun.li).  DO NOT MODIFY. -->
+<permissions>
+    <feature name="oppo.multimedia.record.conflict" />
+    <feature name="oppo.soundeffect.support" />
+    <feature name="oppo.multimedia.dirac.a2dp.support" />
+    <feature name="oppo.dirac.support" />
+    <feature name="oppo.gamespace.voicechange.support" />
+    <!-- Yanliang.Huang@RM.MM.MediaServer.Feature, 2019/10/29, Add for frc support -->
+    <feature name="realme.hqv.frc.support"/>
+    <feature name="oppo.multimedia.internal.record" />
+    <!-- Chenyang.Zhang@RM.MM.AuioServer.Policy, 2019/12/03, Add for DualHeadPhone -->
+    <feature name="realme.multimedia.dualheadphone"/>
+    <feature name="oppo.multimedia.record.channel.support" />
+</permissions>

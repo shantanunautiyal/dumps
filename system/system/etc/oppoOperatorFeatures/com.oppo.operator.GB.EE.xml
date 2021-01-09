@@ -1,0 +1,6 @@
+<!-- This file is used by Exp Region: IR.  DO NOT MODIFY. -->
+<permissions>
+  <feature name="oppo.contacts.operator.number" />
+  <feature name="com.oppo.android.feature.PAI" />
+    <feature name="oppo.default.browser.chrome" />
+</permissions>

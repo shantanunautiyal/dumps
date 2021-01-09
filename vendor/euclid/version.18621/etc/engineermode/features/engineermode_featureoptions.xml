@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<features>
+    <!-- BSP feature -->
+    <feature name="com.oppo.eng.otg.support" />
+    <!--feature name="com.oppo.eng.type.c.support" /-->
+    <feature name="com.oppo.eng.fast.charger.support" />
+    <feature name="com.oppo.eng.sdcard.support" />
+    <feature name="com.oppo.eng.fingerprint.support" />
+    <feature name="com.oppo.eng.smallboard.detect.support" />
+    <feature name="com.oppo.eng.a.smallboard.detect.support" />
+    <feature name="com.oppo.eng.s.smallboard.detect.support" />
+    <feature name="com.oppo.eng.adsp.sensor.mode.support" />
+    <feature name="com.oppo.eng.gyroscope.sensor.support" />
+    <feature name="com.oppo.eng.magnetic.sensor.support" />
+    <feature name="com.oppo.eng.gravity.sensor.calibrate.support" />
+    <feature name="com.oppo.eng.proximity.sensor.calibrate.support" />
+    <feature name="com.oppo.eng.light.sensor.calibrate.support" />
+    <feature name="com.oppo.eng.sensor.selftest.support" />
+    <feature name="com.oppo.eng.sensor.calibrate.through.hidl.support" />
+    <feature name="com.oppo.eng.stepcounter.sensor.support" />
+    <feature name="com.oppo.eng.ship.mode.support" />
+    <feature name="com.oppo.eng.charger.id.voltage.support" />
+    <feature name="com.oppo.eng.vooc.charger.support" />
+    <!--feature name="com.oppo.eng.tp.proximity.support" /-->
+    <!--feature name="com.oppo.eng.fake.proximity.support" /-->
+    <feature name="com.oppo.eng.battery.flag.support" />
+    <feature name="com.oppo.eng.proximity.distance.calibration.support" />
+    <feature name="com.oppo.eng.qcom.sdm710.proximity.calibrate" />
+    <feature name="com.oppo.eng.log.sensor.support" />
+    <!--feature name="com.oppo.eng.sar.sensor.support" /-->
+    <feature name="com.oppo.eng.usb.3.0.support" />
+    <feature name="com.oppo.eng.drm.widevine.support" />
+
+    <!-- Network feature -->
+    <feature name="com.oppo.eng.gemini.support" />
+    <feature name="com.oppo.eng.sim.hot.swap.support" />
+    <!-- Multimedia feature -->
+    <feature name="com.oppo.eng.smart.pa.calibrate.support" />
+    <feature name="com.oppo.eng.fm.radio.support" />
+    <feature name="com.oppo.eng.dp_1.2.support" />
+
+    <!-- Connectivity feature -->
+    <!--feature name="com.oppo.eng.nfc.ese.support" /-->
+
+    <feature name="com.oppo.eng.flash.light.calibrate.support"/>
+    <feature name="com.oppo.eng.flash.light.auto.calibrate.support"/>
+    <feature name="com.oppo.eng.flash.light.support"/>
+    <feature name="com.oppo.eng.second.back.camera.support"/>
+    <feature name="com.oppo.eng.camera.dual.calibrate.support"/>
+    <feature name="com.oppo.eng.camera.dual.verificate.support"/>
+    <!-- Android feature -->
+    <feature name="com.oppo.eng.navigation.bar.support" />
+    <feature name="com.oppo.eng.standlone.userdata.support" />
+    <feature name="com.oppo.eng.qcom.platform" />
+    <feature name="com.oppo.eng.exp.platform" />
+
+    <!-- Camera parameters -->
+    <feature name="com.oppo.eng.camera.calibrate.project.name" value="E" />
+
+    <feature name="com.oppo.eng.camera.calibration.params.name" value="CalibrationOppoE_18621.json" />
+    <feature name="com.oppo.eng.camera.verification.params.name" value="VerificationOppoE_18621.json" />
+    <feature name="com.oppo.eng.camera.calibration.rear.size" value="4608x3456"/>
+    <feature name="com.oppo.eng.camera.calibrate.second.rear.size" value="2592x1944"/>
+
+    <feature name="com.oppo.eng.camera.portrait.size" value="4608x3456"/>
+    <feature name="com.oppo.eng.camera.calibration.yshift" value="9.20"/>
+    <!-- Multimedia parameters -->
+    <!--feature name="com.oppo.eng.fm.convert.rate" value="100" /-->
+    <!-- Network parameters -->
+    <feature name="com.oppo.eng.sar.body" value="0.739" />
+    <feature name="com.oppo.eng.sar.head" value="1.159" />
+
+
+</features>

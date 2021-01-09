@@ -1,0 +1,10 @@
+<permissions>
+    <!-- nitin.misra@APP.DocVault, 17/01/2020, Adding the feature check for DocVault entry in Gallery  -->
+    <feature name="oppo.docvault.support" />
+    <!-- wuyulong@realmeOS.APP.SystemUI.UserId#, 2020/02/18, add for display keyguard charge decimal-->
+    <feature name="realme.support.display.charge.decimal" />
+    <!-- mazhiqiang@realmeUI, 2020/06/24, Add for list optimize -->
+    <feature name="realme.common.listoptimize.support" />
+    <!-- mazhiqiang@realmeUI, 2020/08/07, Add for realme sleep -->
+    <feature name="realme.common.deepsleep.support" />
+</permissions>
