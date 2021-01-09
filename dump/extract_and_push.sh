@@ -1,59 +1,54 @@
 #!/usr/bin/env bash
 
-[[ -z ${API_KEY} ]] && echo "API_KEY not defined, exiting!" && exit 1
+URL="$1"
+CHAT_ID=$(awk <../info '{print $2}')
+MESSAGE_ID=$(awk <../info '{print $3}')
+GITHUB_WORKFLOW="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
 
-function sendTG() {
-    curl -s "https://api.telegram.org/bot${API_KEY}/sendmessage" --data "text=${*}&chat_id=-1001412293127&parse_mode=HTML" > /dev/null
+function editTGmsg() {
+	curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/editMessageText" --data "text=${*}&chat_id=$CHAT_ID&message_id=$MESSAGE_ID&disable_web_page_preview=true&parse_mode=HTML"
 }
-
-curl --fail --silent --location https://git.rip > /dev/null || {
-    sendTG "Can't access git.rip, cancelling job!"
-    exit 1
-}
-
-[[ -z $ORG ]] && ORG="dumps"
 
 if [[ -f $URL ]]; then
-    cp -v "$URL" .
-    sendTG "Found file locally"
+	cp -v "$URL" .
+	editTGmsg "Found file locally"
 else
-    sendTG "Starting <a href=\"${URL}\">dump</a> on <a href=\"$BUILD_URL\">jenkins</a>"
-    if [[ $URL =~ drive.google.com ]]; then
-        echo "Google Drive URL detected"
-        FILE_ID="$(echo "${URL:?}" | sed -r 's/.*([0-9a-zA-Z_-]{33}).*/\1/')"
-        echo "File ID is ${FILE_ID}"
-        CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
-        aria2c --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$FILE_ID" || exit 1
-        rm /tmp/cookies.txt
-    elif [[ $URL =~ mega.nz ]]; then
-        megadl "'$URL'" || exit 1
-    else
-        # Try to download certain URLs with axel first
-        if [[ $URL =~ ^.+(ota\.d\.miui\.com|otafsg|h2os|oxygenos\.oneplus\.net|dl.google|android.googleapis|ozip)(.+)?$ ]]; then
-            axel -q -a -n64 "$URL" || {
-                # Try to download with aria, else wget. Clean the directory each time.
-                aria2c -q -s16 -x16 "${URL}" || {
-                    rm -fv ./*
-                    wget "${URL}" || {
-                        echo "Download failed. Exiting."
-                        sendTG "Failed to download the file."
-                        exit 1
-                    }
-                }
-            }
-        else
-            # Try to download with aria, else wget. Clean the directory each time.
-            aria2c -q -s16 -x16 "${URL}" || {
-                rm -fv ./*
-                wget "${URL}" || {
-                    echo "Download failed. Exiting."
-                    sendTG "Failed to download the file."
-                    exit 1
-                }
-            }
-        fi
-    fi
-    sendTG "Downloaded the file"
+	editTGmsg "Starting <a href=\"$URL\">dump</a> on <a href=\"$GITHUB_WORKFLOW\">GitHub Actions</a>"
+	if [[ $URL =~ drive.google.com ]]; then
+		echo "Google Drive URL detected"
+		FILE_ID="$(echo "${URL:?}" | sed -r 's/.*([0-9a-zA-Z_-]{33}).*/\1/')"
+		echo "File ID is ${FILE_ID}"
+		CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
+		aria2c --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$FILE_ID" || exit 1
+		rm /tmp/cookies.txt
+	elif [[ $URL =~ mega.nz ]]; then
+		megadl "'$URL'" || exit 1
+	else
+		# Try to download certain URLs with axel first
+		if [[ $URL =~ ^.+(ota\.d\.miui\.com|otafsg|h2os|oxygenos\.oneplus\.net|dl.google|android.googleapis|ozip)(.+)?$ ]]; then
+			axel -a -n64 "$URL" || {
+				# Try to download with aria, else wget. Clean the directory each time.
+				aria2c -s16 -x16 "${URL}" || {
+					rm -fv ./*
+					wget "${URL}" || {
+						echo "Download failed. Exiting."
+						editTGmsg "Failed to download the file."
+						exit 1
+					}
+				}
+			}
+		else
+			# Try to download with aria, else wget. Clean the directory each time.
+			aria2c -s16 -x16 "${URL}" || {
+				rm -fv ./*
+				wget "${URL}" || {
+					echo "Download failed. Exiting."
+					editTGmsg "Failed to download the file."
+					exit 1
+				}
+			}
+		fi
+	fi
 fi
 
 FILE=${URL##*/}
@@ -62,123 +57,121 @@ UNZIP_DIR=${FILE/.$EXTENSION/}
 export UNZIP_DIR
 
 if [[ ! -f ${FILE} ]]; then
-    if [[ "$(find . -type f | wc -l)" != 1 ]]; then
-        sendTG "Can't seem to find downloaded file!"
-        exit 1
-    else
-        FILE="$(find . -type f)"
-    fi
+	if [[ "$(find . -type f | wc -l)" != 1 ]]; then
+		editTGmsg "Can't seem to find downloaded file!"
+		exit 1
+	else
+		FILE="$(find . -type f)"
+	fi
 fi
 
 PARTITIONS="system vendor cust odm oem factory product modem xrom systemex system_ext system_other oppo_product opproduct reserve india my_preload my_odm my_stock my_operator my_country my_product my_company my_engineering my_heytap"
 
 if [[ ! -d "${HOME}/extract-dtb" ]]; then
-    git clone -q https://github.com/PabloCastellano/extract-dtb ~/extract-dtb
+	git clone -q https://github.com/PabloCastellano/extract-dtb ~/extract-dtb
 else
-    git -C ~/extract-dtb pull
+	git -C ~/extract-dtb pull
 fi
 
 if [[ ! -d "${HOME}/Firmware_extractor" ]]; then
-    git clone -q https://github.com/AndroidDumps/Firmware_extractor ~/Firmware_extractor
+	git clone -q https://github.com/AndroidDumps/Firmware_extractor ~/Firmware_extractor
 else
-    git -C ~/Firmware_extractor pull
+	git -C ~/Firmware_extractor pull
 fi
 
 if [[ ! -d "${HOME}/mkbootimg_tools" ]]; then
-    git clone -q https://github.com/xiaolu/mkbootimg_tools ~/mkbootimg_tools
+	git clone -q https://github.com/xiaolu/mkbootimg_tools ~/mkbootimg_tools
 else
-    git -C ~/mkbootimg_tools pull
+	git -C ~/mkbootimg_tools pull
 fi
 
 if [[ ! -d "${HOME}/vmlinux-to-elf" ]]; then
-    git clone -q https://github.com/marin-m/vmlinux-to-elf ~/vmlinux-to-elf
+	git clone -q https://github.com/marin-m/vmlinux-to-elf ~/vmlinux-to-elf
 else
-    git -C ~/vmlinux-to-elf pull
+	git -C ~/vmlinux-to-elf pull
 fi
 
 bash ~/Firmware_extractor/extractor.sh "${FILE}" "${PWD}" || (
-    sendTG "Extraction failed!"
-    exit 1
+	editTGmsg "Extraction failed!"
+	exit 1
 )
 
 rm -fv "$FILE"
 
 # Extract the images
 for p in $PARTITIONS; do
-    if [ -f "$p.img" ]; then
-        mkdir "$p" || rm -rf "${p:?}"/*
-        7z x "$p".img -y -o"$p"/ || {
-            sudo mount -o loop "$p".img "$p"
-            mkdir "${p}_"
-            sudo cp -rf "${p}/*" "${p}_"
-            sudo umount "${p}"
-            sudo mv "${p}_" "${p}"
-        }
-        rm -fv "$p".img
-    fi
+	if [ -f "$p.img" ]; then
+		mkdir "$p" || rm -rf "${p:?}"/*
+		7z x "$p".img -y -o"$p"/ || {
+			sudo mount -o loop "$p".img "$p"
+			mkdir "${p}_"
+			sudo cp -rf "${p}/*" "${p}_"
+			sudo umount "${p}"
+			sudo mv "${p}_" "${p}"
+		}
+		rm -fv "$p".img
+	fi
 done
 
 # Bail out right now if no system build.prop
-ls system/build*.prop 2> /dev/null || ls system/system/build*.prop 2> /dev/null || {
-    sendTG "No system build*.prop found, pushing cancelled!"
-    exit 1
+ls system/build*.prop 2>/dev/null || ls system/system/build*.prop 2>/dev/null || {
+	editTGmsg "No system build*.prop found, pushing cancelled!"
+	exit 1
 }
 
 if [[ ! -f "boot.img" ]]; then
-    x=$(find . -type f -name "boot.img")
-    if [[ -n $x ]]; then
-        mv -v "$x" boot.img
-    else
-        echo "boot.img not found!"
-    fi
+	x=$(find . -type f -name "boot.img")
+	if [[ -n $x ]]; then
+		mv -v "$x" boot.img
+	else
+		echo "boot.img not found!"
+	fi
 fi
 
 if [[ ! -f "dtbo.img" ]]; then
-    x=$(find . -type f -name "dtbo.img")
-    if [[ -n $x ]]; then
-        mv -v "$x" dtbo.img
-    else
-        echo "dtbo.img not found!"
-    fi
+	x=$(find . -type f -name "dtbo.img")
+	if [[ -n $x ]]; then
+		mv -v "$x" dtbo.img
+	else
+		echo "dtbo.img not found!"
+	fi
 fi
 
 # Extract bootimage and dtbo
 if [[ -f "boot.img" ]]; then
-    mkdir -v bootdts
-    ~/mkbootimg_tools/mkboot ./boot.img ./bootimg > /dev/null
-    python3 ~/extract-dtb/extract-dtb.py ./boot.img -o ./bootimg > /dev/null
-    find bootimg/ -name '*.dtb' -type f -exec dtc -I dtb -O dts {} -o bootdts/"$(echo {} | sed 's/\.dtb/.dts/')" \; > /dev/null 2>&1
-    # Extract ikconfig
-    if [[ "$(command -v extract-ikconfig)" ]]; then
-        extract-ikconfig boot.img > ikconfig
-    fi
-    # Kallsyms
-    python3 ~/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py boot.img > kallsyms.txt
-    # ELF
-    python3 ~/vmlinux-to-elf/vmlinux_to_elf/main.py boot.img boot.elf
+	mkdir -v bootdts
+	~/mkbootimg_tools/mkboot ./boot.img ./bootimg >/dev/null
+	python3 ~/extract-dtb/extract-dtb.py ./boot.img -o ./bootimg >/dev/null
+	find bootimg/ -name '*.dtb' -type f -exec dtc -I dtb -O dts {} -o bootdts/"$(echo {} | sed 's/\.dtb/.dts/')" \; >/dev/null 2>&1
+	# Extract ikconfig
+	curl -s https://raw.githubusercontent.com/torvalds/linux/master/scripts/extract-ikconfig | bash -s boot.img >ikconfig
+	# Kallsyms
+	python3 ~/vmlinux-to-elf/vmlinux_to_elf/kallsyms_finder.py boot.img >kallsyms.txt
+	# ELF
+	python3 ~/vmlinux-to-elf/vmlinux_to_elf/main.py boot.img boot.elf
 fi
 if [[ -f "dtbo.img" ]]; then
-    mkdir -v dtbodts
-    python3 ~/extract-dtb/extract-dtb.py ./dtbo.img -o ./dtbo > /dev/null
-    find dtbo/ -name '*.dtb' -type f -exec dtc -I dtb -O dts {} -o dtbodts/"$(echo {} | sed 's/\.dtb/.dts/')" \; > /dev/null 2>&1
+	mkdir -v dtbodts
+	python3 ~/extract-dtb/extract-dtb.py ./dtbo.img -o ./dtbo >/dev/null
+	find dtbo/ -name '*.dtb' -type f -exec dtc -I dtb -O dts {} -o dtbodts/"$(echo {} | sed 's/\.dtb/.dts/')" \; >/dev/null 2>&1
 fi
 
 # Oppo/Realme devices have some images in a euclid folder in their vendor, extract those for props
 if [[ -d "vendor/euclid" ]]; then
-    pushd vendor/euclid || exit 1
-    for f in *.img; do
-        [[ -f $f ]] || continue
-        7z x "$f" -o"${f/.img/}"
-        rm -fv "$f"
-    done
-    popd || exit 1
+	pushd vendor/euclid || exit 1
+	for f in *.img; do
+		[[ -f $f ]] || continue
+		7z x "$f" -o"${f/.img/}"
+		rm -fv "$f"
+	done
+	popd || exit 1
 fi
 
 # board-info.txt
-find ./modem -type f -exec strings {} \; | grep "QC_IMAGE_VERSION_STRING=MPSS." | sed "s|QC_IMAGE_VERSION_STRING=MPSS.||g" | cut -c 4- | sed -e 's/^/require version-baseband=/' >> ./board-info.txt
-find ./tz* -type f -exec strings {} \; | grep "QC_IMAGE_VERSION_STRING" | sed "s|QC_IMAGE_VERSION_STRING|require version-trustzone|g" >> ./board-info.txt
+find ./modem -type f -exec strings {} \; | grep "QC_IMAGE_VERSION_STRING=MPSS." | sed "s|QC_IMAGE_VERSION_STRING=MPSS.||g" | cut -c 4- | sed -e 's/^/require version-baseband=/' >>./board-info.txt
+find ./tz* -type f -exec strings {} \; | grep "QC_IMAGE_VERSION_STRING" | sed "s|QC_IMAGE_VERSION_STRING|require version-trustzone|g" >>./board-info.txt
 if [ -f ./vendor/build.prop ]; then
-    strings ./vendor/build.prop | grep "ro.vendor.build.date.utc" | sed "s|ro.vendor.build.date.utc|require version-vendor|g" >> ./board-info.txt
+	strings ./vendor/build.prop | grep "ro.vendor.build.date.utc" | sed "s|ro.vendor.build.date.utc|require version-vendor|g" >>./board-info.txt
 fi
 sort -u -o ./board-info.txt ./board-info.txt
 
@@ -267,22 +260,22 @@ manufacturer=$(echo "$manufacturer" | tr '[:upper:]' '[:lower:]' | tr -dc '[:pri
 printf "\nflavor: %s\nrelease: %s\nid: %s\nincremental: %s\ntags: %s\nfingerprint: %s\nbrand: %s\ncodename: %s\ndescription: %s\nbranch: %s\nrepo: %s\nmanufacturer: %s\nplatform: %s\ntop_codename: %s\nis_ab: %s\n" "$flavor" "$release" "$id" "$incremental" "$tags" "$fingerprint" "$brand" "$codename" "$description" "$branch" "$repo" "$manufacturer" "$platform" "$top_codename" "$is_ab"
 
 if [[ $is_ab == true ]]; then
-    twrpimg=boot.img
+	twrpimg=boot.img
 else
-    twrpimg=recovery.img
+	twrpimg=recovery.img
 fi
 
 if [[ -f $twrpimg ]]; then
-    echo "Detected $twrpimg! Generating twrp device tree"
-    if python3 -m twrpdtgen "$twrpimg" --output ./twrp-device-tree -v --no-git; then
-        if [[ ! -f "working/twrp-device-tree/README.md" ]]; then
-            curl https://raw.githubusercontent.com/wiki/SebaUbuntu/TWRP-device-tree-generator/4.-Build-TWRP-from-source.md > twrp-device-tree/README.md
-        fi
-    else
-        echo "Failed to generate twrp tree!"
-    fi
+	echo "Detected $twrpimg! Generating twrp device tree"
+	if python3 -m twrpdtgen "$twrpimg" --output ./twrp-device-tree -v --no-git; then
+		if [[ ! -f "working/twrp-device-tree/README.md" ]]; then
+			curl https://raw.githubusercontent.com/wiki/SebaUbuntu/TWRP-device-tree-generator/4.-Build-TWRP-from-source.md >twrp-device-tree/README.md
+		fi
+	else
+		echo "Failed to generate twrp tree!"
+	fi
 else
-    echo "Failed to find $twrpimg!"
+	echo "Failed to find $twrpimg!"
 fi
 
 # Fix permissions
@@ -290,85 +283,29 @@ sudo chown "$(whoami)" ./* -R
 sudo chmod -R u+rwX ./*
 
 # Generate all_files.txt
-find . -type f -printf '%P\n' | sort | grep -v ".git/" > ./all_files.txt
-
-# Check whether the subgroup exists or not
-if ! curl -s -H "Authorization: Bearer $DUMPER_TOKEN" "https://git.rip/api/v4/groups/$ORG%2f$repo_subgroup" -s --fail > x; then
-    if ! curl -H "Authorization: Bearer $DUMPER_TOKEN" "https://git.rip/api/v4/groups" -X POST -F name="${repo_subgroup^}" -F parent_id=562 -F path="${repo_subgroup}" --silent --fail > x; then
-        sendTG "Creating subgroup for $repo_subgroup failed!"
-        exit 1
-    fi
-fi
-group_id="$(jq -r '.id' x)"
-rm -f x
-
-[[ -z $group_id ]] && {
-    sendTG "Unable to get gitlab group id!"
-    exit 1
-}
-
-# Create the repo if it doesn't exist
-curl --silent -H "Authorization: bearer ${DUMPER_TOKEN}" "https://git.rip/api/v4/projects/$ORG%2f$repo_subgroup%2f$repo_name" > x
-message="$(jq -r .message x)"
-project_id="$(jq .id x)"
-rm -f x
-if [[ $message == "404 Project Not Found" ]]; then
-    curl --silent -H "Authorization: bearer ${DUMPER_TOKEN}" "https://git.rip/api/v4/projects" -X POST -F namespace_id="$group_id" -F name="$repo_name" -F visibility=public > x
-    project_id="$(jq .id x)"
-    rm -f x
-    if [[ -z $project_id ]]; then
-        sendTG "Could not get project id"
-        exit 1
-    fi
-fi
-
-curl --silent -H "Authorization: bearer ${DUMPER_TOKEN}" "https://git.rip/api/v4/projects/$project_id/repository/branches/$branch" > x
-[[ "$(jq -r '.name' x)" == "$branch" ]] && {
-    sendTG "$branch already exists in <a href=\"https://git.rip/dumps/$repo\">$repo</a>!"
-    rm -f x
-    exit 1
-}
-rm -f x
+find . -type f -printf '%P\n' | sort | grep -v ".git/" >./all_files.txt
 
 # Add, commit, and push after filtering out certain files
 git init
-git config user.name 'dumper'
-git config user.email '457-dumper@users.noreply.git.rip'
+git config user.name "SamarV-121"
+git config user.email "samarvispute121@gmail.com"
 git checkout -b "$branch"
-# find . -size +97M -printf '%P\n' -o -name '*sensetime*' -printf '%P\n' -o -iname '*Megvii*' -printf '%P\n' -o -name '*.lic' -printf '%P\n' -o -name '*zookhrs*' -printf '%P\n' > .gitignore
-sendTG "Committing and pushing"
-git add -A
-git commit --quiet --signoff --message="$description"
-git push "ssh://git@git.rip/$ORG/$repo.git" HEAD:refs/heads/"$branch" || {
-    sendTG "Pushing failed!"
-    echo "Pushing failed!"
-    exit 1
+find . -size +97M -printf '%P\n' -o -name '*sensetime*' -printf '%P\n' -o -iname '*Megvii*' -printf '%P\n' -o -name '*.lic' -printf '%P\n' -o -name '*zookhrs*' -printf '%P\n' -o -name 'extract_and_push.sh' -printf '%P\n' >.gitignore
+editTGmsg "Dumped, now Committing and pushing"
+git add . ':!system/system/app' ':!system/system/priv-app'
+git commit -m "Add $branch"
+git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}" "$branch" || {
+	editTGmsg "Pushing failed!"
+	echo "Pushing failed!"
+	exit 1
+}
+git add system/system/app system/system/priv-app
+git commit -m "Add leftover apps for $branch"
+git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}" "$branch" || {
+	editTGmsg "Pushing failed!"
+	echo "Pushing failed!"
+	exit 1
 }
 
-# Set default branch to the newly pushed branch
-curl -s -H "Authorization: bearer ${DUMPER_TOKEN}" "https://git.rip/api/v4/projects/$project_id" -X PUT -F default_branch="$branch" > /dev/null
-
 # Send message to Telegram group
-sendTG "Pushed <a href=\"https://git.rip/$ORG/$repo\">$description</a>"
-
-# Prepare message to be sent to Telegram channel
-commit_head=$(git rev-parse HEAD)
-commit_link="https://git.rip/$ORG/$repo/commit/$commit_head"
-echo -e "Sending telegram notification"
-(
-    printf "<b>Brand: %s</b>" "$brand"
-    printf "\n<b>Device: %s</b>" "$codename"
-    printf "\n<b>Version:</b> %s" "$release"
-    printf "\n<b>Fingerprint:</b> %s" "$fingerprint"
-    printf "\n<b>Git link:</b>"
-    printf "\n<a href=\"%s\">Commit</a>" "$commit_link"
-    printf "\n<a href=\"https://git.rip/%s/%s/tree/%s/\">$codename</a>" "$ORG" "$repo" "$branch"
-) >> tg.html
-
-TEXT=$(cat tg.html)
-
-# Send message to Telegram channel
-curl -s "https://api.telegram.org/bot${API_KEY}/sendmessage" --data "text=${TEXT}&chat_id=@android_dumps&parse_mode=HTML&disable_web_page_preview=True" > /dev/null
-
-# Delete file after sending message
-rm -fv tg.html
+editTGmsg "Pushed <a href=\"${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/$branch\">$description</a>"

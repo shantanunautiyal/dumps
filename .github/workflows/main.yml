@@ -1,0 +1,23 @@
+name: DUMP
+
+on: workflow_dispatch
+
+jobs:
+  update:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup
+      run: |
+       sudo apt-get install -y python3-setuptools axel
+       curl -s https://raw.githubusercontent.com/AndroidDumps/dumpyara/master/setup.sh | bash
+
+    - name: Dump
+      continue-on-error: true
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      run: |
+        cd dump
+        bash extract_and_push.sh `awk <../info '{print $1}'`
