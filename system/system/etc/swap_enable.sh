@@ -24,15 +24,15 @@ elif [ $MemTotal -le 4194304 ]; then
   echo 160 > /proc/sys/vm/swappiness
   echo 60 > /proc/sys/vm/direct_swappiness
 elif [ $MemTotal -le 6291456 ]; then
-  #config 1GB zram size with memory 6 GB
+  #config 3GB zram size with memory 6 GB
   echo lz4 > /sys/block/zram0/comp_algorithm
-  echo 2415919104 > /sys/block/zram0/disksize
+  echo 3221225472 > /sys/block/zram0/disksize
   echo 160 > /proc/sys/vm/swappiness
   echo 60 > /proc/sys/vm/direct_swappiness
 else
-  #config 1GB zram size with memory greater than 6 GB
+  #config 4GB zram size with memory greater than 6 GB
   echo lz4 > /sys/block/zram0/comp_algorithm
-  echo 1073741824 > /sys/block/zram0/disksize
+  echo 4294967296 > /sys/block/zram0/disksize
   echo 160 > /proc/sys/vm/swappiness
   echo 60 > /proc/sys/vm/direct_swappiness
 fi

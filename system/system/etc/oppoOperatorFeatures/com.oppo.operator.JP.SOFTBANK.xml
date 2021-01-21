@@ -43,6 +43,7 @@
   <feature name="oppo.customize.oppo_backup_restore.disable" />
   <feature name="coloros.customize.settings.gota.update.support" />
   <feature name="coloros.customize.bootreg.hide_ota_update_preference"/>
+  <feature name="coloros.customize.settings.hide_video_beauty" />
   <feature name="oppo.multiuser.entry.unsupport" />
   <feature name="coloros.customize.guardelf.jp.softbank.keepalive" />
   <feature name="coloros.customize.systemui.virtualkey_recent_right_of_home" />

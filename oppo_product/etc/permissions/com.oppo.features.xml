@@ -66,4 +66,5 @@
   <feature name="realme.common.deepsleep.support" />
   <feature name="realme.support.display.charge.decimal" />
   <feature name="realme.support.language.uncheck_IL_default" />
+  <feature name="oplus.software.gestureup.support" />
 </permissions>

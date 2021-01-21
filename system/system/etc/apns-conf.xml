@@ -4204,6 +4204,18 @@
   />
   <!-- bhy@oppo.com add for EU from one plus end  -->
  <!-- Yanzhou.Chen@RM.NW.DATA.2664009, 2020/1/3, follow Samsung APN for 7 Europe marktet. end -->
+  <apn carrier="IMS"
+      mcc="219"
+      mnc="10"
+      apn="ims"
+      type="ims"
+  />
+  <apn carrier="HOS"
+      mcc="219"
+      mnc="10"
+      apn="hos"
+      type="xcap"
+  />
 
  <!-- Yuchun.Luo@RM.NW.DATA.2661373, 2020/03/19, follow 20200319 new APN settings from operator. start -->
   <apn carrier="Telenor Internet"
@@ -15393,6 +15405,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="34"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="AIRCEL MMS"
       mcc="404"
       mnc="35"
@@ -15460,6 +15484,19 @@
       apn="bsnlnet"
       type="default,supl"
   />
+
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="38"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="IMS"
       mcc="404"
       mnc="40"
@@ -15698,6 +15735,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="51"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="Reliance RTel MMS"
       mcc="404"
       mnc="52"
@@ -15732,6 +15781,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="53"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="Cellone_North MMS"
       mcc="404"
       mnc="54"
@@ -15748,7 +15809,18 @@
       apn="bsnlnet"
       type="default,supl"
   />
-
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="54"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="Cellone_North MMS"
       mcc="404"
       mnc="55"
@@ -15766,6 +15838,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="55"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="IDEA"
       mcc="404"
       mnc="56"
@@ -15802,6 +15886,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="57"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="Cellone_North MMS"
       mcc="404"
       mnc="58"
@@ -15819,6 +15915,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="58"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="Cellone_North MMS"
       mcc="404"
       mnc="59"
@@ -15836,6 +15944,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="59"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="Vodafone MMS"
       mcc="404"
       mnc="60"
@@ -15883,6 +16003,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="62"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="64"
@@ -15901,6 +16033,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="64"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="Cellone_North MMS"
       mcc="404"
       mnc="66"
@@ -15918,6 +16062,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="66"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="Reliance RTel MMS"
       mcc="404"
       mnc="67"
@@ -16016,6 +16172,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/07, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="71"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="72"
@@ -16034,6 +16202,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="72"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="73"
@@ -16052,6 +16232,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="73"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="74"
@@ -16069,6 +16261,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="74"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="75"
@@ -16086,6 +16290,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="75"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="76"
@@ -16103,6 +16319,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="76"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="77"
@@ -16120,6 +16348,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="77"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="IDEA"
       mcc="404"
       mnc="78"
@@ -16156,7 +16396,18 @@
       apn="bsnlnet"
       type="default,supl"
   />
-
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/014, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="79"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="80"
@@ -16175,6 +16426,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="80"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="bsnlmms"
       mcc="404"
       mnc="81"
@@ -16192,6 +16455,18 @@
       type="default,supl"
   />
 
+  <!-- #ifdef ODM_WT_EDIT -->
+  <!-- Junfeng.Gao@ODM_WT.NW.IMS.2710108, 2020/04/14, add India BSNL ims apn-->
+  <apn carrier="IMS"
+       mcc="404"
+       mnc="81"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- #endif ODM_WT_EDIT -->
   <apn carrier="IDEA"
       mcc="404"
       mnc="82"

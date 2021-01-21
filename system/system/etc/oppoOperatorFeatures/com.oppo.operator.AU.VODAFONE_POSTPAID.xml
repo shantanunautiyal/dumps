@@ -20,7 +20,7 @@
   <feature name="oppo.stk.launcher" />
   <feature name="oppo.comm.simsettings.hide.smart.5g.switch" />
   <feature name="coloros.customize.contacts.special_number_expand_detail" />
-  <feature name="oppo.softap.unique.passwd" />
   <feature name="oppo.settings.hide.networkspeed" />
   <feature name="oppo.oppo_disaplay_calculate_data_traffic.def.off" />
+  <feature name="oppo.softap.unique.passwd" />
 </permissions>

@@ -837,7 +837,12 @@
     <EccEntry Ecc="191" Category="0" Condition="1" Plmn="520 FFF"/>
     <EccEntry Ecc="199" Category="0" Condition="1" Plmn="520 FFF"/>
     <EccEntry Ecc="1669" Category="0" Condition="1" Plmn="520 FFF"/>
-
+    <EccEntry Ecc="191" Category="1" Condition="1" Plmn = "520 00" />
+    <EccEntry Ecc="199" Category="4" Condition="1" Plmn = "520 00" />
+    <EccEntry Ecc="1669" Category="2" Condition="1" Plmn = "520 00" />
+    <EccEntry Ecc="191" Category="1" Condition="1" Plmn = "520 04" />
+    <EccEntry Ecc="199" Category="4" Condition="1" Plmn = "520 04" />
+    <EccEntry Ecc="1669" Category="2" Condition="1" Plmn = "520 04" />
     <EccEntry Ecc="191" Category="0" Condition="2" Plmn="520 05"/>
     <EccEntry Ecc="199" Category="0" Condition="2" Plmn="520 05"/>
     <EccEntry Ecc="1669" Category="0" Condition="2" Plmn="520 05"/>

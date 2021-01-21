@@ -947,7 +947,7 @@ applications that come with the platform
 		<permission name="android.permission.FORCE_STOP_PACKAGES" />
 		<permission name="android.permission.INSTALL_PACKAGES" />
     </privapp-permissions>
-	
+
 	<privapp-permissions package="com.heytap.market">
         <permission name="android.permission.READ_RUNTIME_PROFILES"/>
 		<permission name="android.permission.READ_LOGS"/>
@@ -957,13 +957,17 @@ applications that come with the platform
 		<permission name="android.permission.PACKAGE_USAGE_STATS"/>
 		<permission name="android.permission.DELETE_PACKAGES"/>
 		<permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+                <!-- #ifdef ODM_HQ_EDIT -->
+                <!-- lijun.xie@ODM_HQ.AD.CTS, 2020-10-16 : Add for android Q -->
+                <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+                <!-- #endif  ODM_HQ_EDIT  -->
     </privapp-permissions>
-	
+
 	<privapp-permissions package="com.heytap.usercenter">
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
 		<permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
     </privapp-permissions>
-	
+
 	<privapp-permissions package="com.heytap.speechassist.engine">
         <permission name="android.permission.READ_LOGS"/>
 		<permission name="android.permission.WRITE_SECURE_SETTINGS"/>

@@ -1,7 +1,7 @@
 [+] Kernel successfully decompressed in-memory (the offsets that follow will be given relative to the decompressed binary)
-[+] Version string: Linux version 4.14.141+ (nobody@android-build) (Android (5484270 based on r353983c) clang version 9.0.3 (https://android.googlesource.com/toolchain/clang 745b335211bb9eadfa6aa6301f84715cee4b37c5) (https://android.googlesource.com/toolchain/llvm 60cf23e54e46c807513f7a36d0a7b777920b5881) (based on LLVM 9.0.3svn)) #1 SMP PREEMPT Tue Sep 22 10:18:41 CST 2020
-[+] Guessed architecture: aarch64 successfully in 4.90 seconds
-[+] Found relocations table at file offset 0x1638e70 (count=192466)
+[+] Version string: Linux version 4.14.141+ (nobody@android-build) (Android (5484270 based on r353983c) clang version 9.0.3 (https://android.googlesource.com/toolchain/clang 745b335211bb9eadfa6aa6301f84715cee4b37c5) (https://android.googlesource.com/toolchain/llvm 60cf23e54e46c807513f7a36d0a7b777920b5881) (based on LLVM 9.0.3svn)) #1 SMP PREEMPT Wed Dec 16 20:56:04 CST 2020
+[+] Guessed architecture: aarch64 successfully in 4.85 seconds
+[+] Found relocations table at file offset 0x1638e70 (count=192469)
 [+] Found kernel text candidate: 0xffffff8008082000
-[+] Successfully applied 192466 relocations.
+[+] Successfully applied 192469 relocations.
 [+] Found kallsyms_token_table at file offset 0x0127e100
