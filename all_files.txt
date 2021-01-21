@@ -1,3 +1,4 @@
+all_files.txt
 board-info.txt
 boot.img
 bootimg/00_kernel
