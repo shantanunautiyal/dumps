@@ -1,6 +1,14 @@
 name: DUMP
 
-on: workflow_dispatch
+on:
+  repository_dispatch:
+    types: meh
+
+env:
+  URL: ${{ github.event.client_payload.url }}
+  BRANCH: ${{ github.event.client_payload.branch }}
+  CHAT_ID: ${{ github.event.client_payload.chat_id }}
+  MESSAGE_ID: ${{ github.event.client_payload.message_id }}
 
 jobs:
   update:
@@ -10,14 +18,13 @@ jobs:
 
     - name: Setup
       run: |
-       sudo apt-get install -y python3-setuptools axel
+       sudo apt-get install -y python3-setuptools
        curl -s https://raw.githubusercontent.com/AndroidDumps/dumpyara/master/setup.sh | bash
 
     - name: Dump
-      continue-on-error: true
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
       run: |
         cd dump
-        bash extract_and_push.sh `awk <../info '{print $1}'`
+        bash extract_and_push.sh

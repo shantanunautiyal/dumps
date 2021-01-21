@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-
-URL="$1"
-CHAT_ID=$(awk <../info '{print $2}')
-MESSAGE_ID=$(awk <../info '{print $3}')
 GITHUB_WORKFLOW="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
 
 function editTGmsg() {
@@ -269,28 +265,40 @@ sudo chmod -R u+rwX ./*
 
 # Generate all_files.txt
 find . -type f -printf '%P\n' | sort | grep -v ".git/" >./all_files.txt
-
-# Add, commit, and push after filtering out certain files
-git init
 git config user.name "SamarV-121"
 git config user.email "samarvispute121@gmail.com"
-git checkout -b "$branch"
-find . -size +97M -printf '%P\n' -o -name '*sensetime*' -printf '%P\n' -o -iname '*Megvii*' -printf '%P\n' -o -name '*.lic' -printf '%P\n' -o -name '*zookhrs*' -printf '%P\n' -o -name 'extract_and_push.sh' -printf '%P\n' >.gitignore
-editTGmsg "Dumped, now Committing and pushing"
-git add . ':!system/system/app' ':!system/system/priv-app'
-git commit -m "Add $branch"
-git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}" "$branch" || {
-	editTGmsg "Pushing failed!"
-	echo "Pushing failed!"
-	exit 1
+
+gpush() {
+	find . -size +97M -printf '%P\n' -o -name '*sensetime*' -printf '%P\n' -o -iname '*Megvii*' -printf '%P\n' -o -name '*.lic' -printf '%P\n' -o -name '*zookhrs*' -printf '%P\n' -printf '%P\n' -o -name 'extract_and_push.sh' >.gitignore
+	editTGmsg "Dumped, now Committing and pushing"
+	git add . ':!system/system/app' ':!system/system/priv-app'
+	git commit -m "Add $branch"
+	[[ $BRANCH ]] && branch=$BRANCH
+	git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}" "$branch" || {
+		editTGmsg "Pushing failed!"
+		echo "Pushing failed!"
+		exit 1
+	}
+	git add system/system/app system/system/priv-app
+	git commit -m "Add leftover apps for $branch"
+	git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}" "$branch" || {
+		editTGmsg "Pushing failed!"
+		echo "Pushing failed!"
+		exit 1
+	}
 }
-git add system/system/app system/system/priv-app
-git commit -m "Add leftover apps for $branch"
-git push "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}" "$branch" || {
-	editTGmsg "Pushing failed!"
-	echo "Pushing failed!"
-	exit 1
-}
+
+# Add, commit, and push after filtering out certain files
+if [ "$BRANCH" ]; then
+	git clone --depth=1 "${GITHUB_SERVER_URL}"/"${GITHUB_REPOSITORY}" -b "${BRANCH}" ../"${BRANCH}"
+	cp -rf -- * ../"${BRANCH}"
+	cd ../"${BRANCH}" || exit
+	gpush
+else
+	git init
+	git checkout -b "$branch"
+	gpush
+fi
 
 # Send message to Telegram group
 editTGmsg "Pushed <a href=\"${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/$branch\">$description</a>"
