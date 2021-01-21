@@ -229,7 +229,8 @@ description=$(grep -m1 -oP "(?<=^ro.build.description=).*" -hs {system,system/sy
 [[ -z ${description} ]] && description="$flavor $release $id $incremental $tags"
 is_ab=$(grep -m1 -oP "(?<=^ro.build.ab_update=).*" -hs {system,system/system,vendor}/build*.prop)
 [[ -z ${is_ab} ]] && is_ab="false"
-branch=$(echo "$description" | tr ' ' '-')
+branch=$(grep ro.build.version.ota oppo_product/build.prop | cut -d'=' -f2)
+[[ -z ${branch} ]] && branch=$(echo "$description" | tr ' ' '-')
 repo_subgroup=$(echo "$brand" | tr '[:upper:]' '[:lower:]')
 [[ -z $repo_subgroup ]] && repo_subgroup=$(echo "$manufacturer" | tr '[:upper:]' '[:lower:]')
 repo_name=$(echo "$codename" | tr '[:upper:]' '[:lower:]')
