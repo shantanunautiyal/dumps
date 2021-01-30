@@ -1,6 +1,5 @@
 <!-- This file is used by Exp Region: IR.  DO NOT MODIFY. -->
 <permissions>
-  <feature name="oppo.oppo_disaplay_calculate_data_traffic.def.off" />
   <feature name="coloros.customize.statusbar.show.vowifi" />
   <feature name="oppo.phone.hide.call.harass.intercept" />
   <feature name="oppo.customize.childspace.support.hide" />
@@ -18,4 +17,5 @@
   <feature name="oppo.simsettings.config.vowifi.by.omacp"/>
   <feature name="oppo.omacp.receive.vowifisetting" />
   <feature name="coloros.customize.wirelesssettings.notice_unsafe_wifi_connect" />
+  <feature name="oppo.oppo_disaplay_calculate_data_traffic.def.off" />
 </permissions>

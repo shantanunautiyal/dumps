@@ -1,0 +1,6 @@
+<oplus-config>
+  <!-- gouwei@realmeUI, 2020/10/29, add for freeze-->
+  <oplus-feature name="oplus.software.forwardly_freeze" />
+  <!-- xiongqi@realmeUI, 2021/1/20, add for realmeUI MORE multiapp support -->
+	<unavailable-oplus-feature name="oplus.software.multiapp_support_less" />
+</oplus-config>

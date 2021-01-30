@@ -1,0 +1,1 @@
+name="BookmarkProvider.apk" info_1="609343c51bbce9849561f1d6d36983e7" info_2="7d822fa38ee4143c247579c7cd1775f8" location="app/BookmarkProvider/BookmarkProvider.apk"

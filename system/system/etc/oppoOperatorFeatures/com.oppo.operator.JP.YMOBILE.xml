@@ -1,8 +1,5 @@
 <!-- This file is used by Exp Region: IR.  DO NOT MODIFY. -->
 <permissions>
-  <feature name="oppo.settings.mms.emergency.support" />
-  <feature name="coloros.customize.settings.gota.update.support" />
-  <feature name="oppo.oppo_disaplay_calculate_data_traffic.def.off" />
   <feature name="oppo.commcenter.mms.remove.oppo.mms"/>
   <feature name="oppo.mms.replace.google.mms"/>
   <feature name="oppo.phone.show.softbank.call.settings" />
@@ -25,4 +22,7 @@
   <feature name="coloros.customize.cellbroadcast.ym.channels.config"/>
   <feature name="oppo.phone.roam.call.show.dialog" />
   <feature name="coloros.customize.simsettings.disable_carrier_location_notification" />
+  <feature name="oppo.settings.mms.emergency.support" />
+  <feature name="coloros.customize.settings.gota.update.support" />
+  <feature name="oppo.oppo_disaplay_calculate_data_traffic.def.off" />
 </permissions>

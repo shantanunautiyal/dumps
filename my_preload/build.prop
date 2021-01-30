@@ -1,0 +1,9 @@
+# build porp start
+ro.oplus.image.my_preload.type=export_19661_Realme
+ro.oplus.image.my_preload.version=0.0.1.20210128002638981235
+ro.oplus.image.my_preload.date=2021-01-28 00:48:57
+ro.oplus.image.my_preload.date.utc=1611766137
+ro.oplus.preload.custom=1.2.43-IN
+ro.facebook.partnerid=oppo:de8df4f5-bc34-4319-892c-cdf507e7e268
+ro.com.google.clientidbase=android-oppo
+ro.com.google.clientidbase.ms=android-oppo-rev1

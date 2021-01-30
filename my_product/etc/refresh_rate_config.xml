@@ -1393,8 +1393,8 @@
 <!--Start High rate(120/90) oversea's app-->
   <item package="com.google.android.keep" rateId="1-1-2-0" />
   <item package="com.whatsapp" rateId="1-1-2-0" />
-  <item package="com.facebook.katana" rateId="1-1-2-0" />     <!--facebook-->
-  <item package="com.instagram.android" rateId="1-1-2-0" />   <!--instagram-->
+  <item package="com.facebook.katana" rateId="1-1-2-0" disableViewOverride="true"/>     <!--facebook-->
+  <item package="com.instagram.android" rateId="1-1-2-0" disableViewOverride="true"/>   <!--instagram-->
   <item package="com.snapchat.android" rateId="1-1-2-0" />    <!--snapchat-->
   <item package="com.facebook.orca" rateId="1-1-2-0" />       <!--facebook.orca-->
   <item package="com.eterno" rateId="1-1-2-0" />              <!--Dailyhunt-->
@@ -2206,7 +2206,7 @@
   <item package="com.tencent.tmgp.hqxy" rateId="0-0-0-0" disableViewOverride="true" /> <!--魂器学院 应用宝-->
   <item package="com.ztgame.bob" rateId="0-0-0-0" disableViewOverride="true" />  <!--球球大作战-->
   <item package="com.netease.x19" rateId="0-0-0-0" disableViewOverride="true" /> <!--我的世界 官网-->
-  <item package="com.netease.mc.nearme.gamecenter" rateId="0-0-0-0" disableViewOverride="true" />  <!--我的世界 商店-->
+  <item package="com.netease.mc.nearme.gamecenter" rateId="2-2-2-2" disableViewOverride="true" />  <!--我的世界 商店-->
   <item package="com.tencent.tmgp.wdsj666" rateId="0-0-0-0" disableViewOverride="true" /> <!--我的世界 应用宝-->
   <item package="com.longyuan.sdorica.nearme.gamecenter" rateId="0-0-0-0" disableViewOverride="true" />  <!--万象物语-->
   <item package="com.wepie.snake.nearme.gamecenter" rateId="0-0-0-0" disableViewOverride="true" />  <!--贪吃蛇大作战 -->

@@ -1,0 +1,7 @@
+# build porp start
+ro.oplus.image.my_stock.type=export_Realme
+ro.oplus.image.my_stock.version=20.11.2.20210127161544977972
+ro.oplus.image.my_stock.date=2021-01-27 16:18:10
+ro.oplus.image.my_stock.date.utc=1611735490
+ro.oem.key1=pub
+ro.product.brand.ui=realmeUI

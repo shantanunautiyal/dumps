@@ -6,7 +6,7 @@ on boot
     chmod 664 /proc/oppoCustom/nPlUsbEnumEnabled
     chown system root /proc/oppoCustom/nPlUsbEnumEnabled
 
-    chmod 664 /proc/oppoCustom/nUsbAutoSwitch
+    chmod 666 /proc/oppoCustom/nUsbAutoSwitch
     chown system root /proc/oppoCustom/nUsbAutoSwitch
 
     symlink /mnt/vendor/persist /storage/persist

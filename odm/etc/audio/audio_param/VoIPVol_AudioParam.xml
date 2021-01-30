@@ -9,7 +9,6 @@
     <Param path="HS5POLE" param_id="4"/>
     <Param path="HS5POLE_ANC" param_id="4"/>
     <Param path="USB" param_id="1"/>
-		<Param path="HEARING_AID" param_id="1"/>
     <Param path="Default,RCV" param_id="12"/>
     <Param path="Default,HAC" param_id="12"/>
     <Param path="Default,HS" param_id="13"/>
@@ -43,7 +42,7 @@
       <Param name="ul_gain" value="0"/>
     </ParamUnit>
     <ParamUnit param_id="14">
-      <Param name="dl_gain" value="21,19,16,13,10,7,4"/>
+      <Param name="dl_gain" value="21,19,16,13,10,7,6"/>
       <Param name="ul_gain" value="15"/>
     </ParamUnit>
     <ParamUnit param_id="15">

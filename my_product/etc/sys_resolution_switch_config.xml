@@ -20,5 +20,23 @@
 <CompatFhd>org.cocos2dx.FishingJoy2,1.33333333334,0.75,360</CompatFhd>
 <CompatFhd>com.gbits.atm.nearme.gamecenter,1.33333333334,0.75,360</CompatFhd><!-- 问道 -->
 <CompatFhd>com.nextwave.wcc2</CompatFhd><!-- World Cricket Championship -->
+<CompatFhd>com.dts.freefireth</CompatFhd>
+<CompatFhd>com.mobile.legends</CompatFhd>
+<CompatFhd>com.ngame.allstar.eu</CompatFhd>
+<CompatFhd>com.garena.game.kgtw</CompatFhd>
+<CompatFhd>com.garena.game.kgvn</CompatFhd>
+<CompatFhd>com.netmarble.penta</CompatFhd>
+<CompatFhd>com.garena.game.kgth</CompatFhd>
+<CompatFhd>com.garena.game.kgsam</CompatFhd>
+<CompatFhd>com.garena.game.kgvntest</CompatFhd>
+<CompatFhd>com.garena.game.kgcn</CompatFhd>
+<CompatFhd>com.garena.game.kges</CompatFhd>
+<CompatFhd>com.garena.game.kgid</CompatFhd>
+<CompatFhd>com.netease.mc.m4399</CompatFhd><!-- 我的世界 -->
+<CompatFhd>com.netease.mc.nearme.gamecenter</CompatFhd>
+<CompatFhd>com.tencent.tmgp.pubgmhd</CompatFhd>
+<CompatFhd>com.tencent.ig</CompatFhd>
+<CompatFhd>com.tencent.iglite</CompatFhd>
+<CompatFhd>com.tencent.tmgp.sgame</CompatFhd>
 </sys_resolution_switch_config>
 

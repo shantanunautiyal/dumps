@@ -1,10 +1,5 @@
 <!-- This file is used by Exp Region: IR.  DO NOT MODIFY. -->
 <permissions>
-    <feature name="oppo.customize.lowercase_o.volte"/>
-    <feature name="oppo.customize.dmtf_tone_default.off.dialing" />
-    <feature name="oppo.customize.function.time_show_12"/>
-    <feature name="oppo.customize.hardware_software_version_show" />
-    <feature name="oppo.oppo_disaplay_calculate_data_traffic.def.off" />
   <feature name="oppo.commcenter.phone.clear.voicemail.when.dial" />
   <feature name="oppo.mms.replace.google.mms"/>
   <feature name="oppo.default.sms.application.google.messages"/>
@@ -30,4 +25,9 @@
   <feature name="oppo.contacts.calllog.show.vowifi" />
   <feature name="oppo.phone.display.vowifi.icon.active" />
   <feature name="oppo.phone.hide.hd.icon" />
+    <feature name="oppo.customize.lowercase_o.volte"/>
+    <feature name="oppo.customize.dmtf_tone_default.off.dialing" />
+    <feature name="oppo.customize.function.time_show_12"/>
+    <feature name="oppo.customize.hardware_software_version_show" />
+    <feature name="oppo.oppo_disaplay_calculate_data_traffic.def.off" />
 </permissions>

@@ -13,7 +13,6 @@
 		<Param path="HAC" param_id="2"/>
 		<Param path="TTY" param_id="4"/>
 		<Param path="USB" param_id="5"/>
-		<Param path="HEARING_AID" param_id="2"/>
 	</ParamTree>
 	<ParamUnitPool>
 		<ParamUnit param_id="0">

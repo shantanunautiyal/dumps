@@ -980,16 +980,21 @@
 
     <!--716 Peru-->
     <EccEntry Ecc="105" Category="0" Condition="1" Plmn = "716 FFF" />
-
+    <EccEntry Ecc="115" Category="0" Condition="1" Plmn = "716 FFF" />
+    <EccEntry Ecc="116" Category="0" Condition="1" Plmn = "716 FFF" />
+    <EccEntry Ecc="117" Category="0" Condition="1" Plmn = "716 FFF" />
     <!--722 Argentine-->
 
     <!--724 Brazil-->
     <EccEntry Ecc="190" Category="0" Condition="1" Plmn = "724 FFF" />
-
+    <EccEntry Ecc="194" Category="0" Condition="1" Plmn = "724 FFF" />
+    <EccEntry Ecc="197" Category="0" Condition="1" Plmn = "724 FFF" />
+    <EccEntry Ecc="199" Category="0" Condition="1" Plmn = "724 FFF" />
     <!--730 Chile-->
     <EccEntry Ecc="133" Category="0" Condition="1" Plmn = "730 FFF" />
     <EccEntry Ecc="132" Category="0" Condition="2" Plmn = "730 FFF" />
     <EccEntry Ecc="131" Category="0" Condition="2" Plmn = "730 FFF" />
+    <EccEntry Ecc="134" Category="0" Condition="2" Plmn = "730 FFF" />
 
     <!--732 Colombia-->
     <EccEntry Ecc="119" Category="0" Condition="1" Plmn="732 FFF"/>

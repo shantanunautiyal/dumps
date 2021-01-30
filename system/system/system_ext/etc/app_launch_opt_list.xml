@@ -409,6 +409,13 @@
     <a>com.tencent.videolite.android</a>
     <a>com.ubercab</a>
     <a>com.tencent.mobileqq</a>
+    <a>com.google.android.apps.maps</a>
+    <a>com.ais.mimo.eservice</a>
+    <a>com.UCMobile.intl</a>
+    <a>com.twitter.android</a>
+    <a>com.newb.videoPlayerc</a>
+    <b>com.twitter.android</b>
+    <b>com.newb.videoPlayerc</b>
     <b>com.smzdm.client.android</b>
     <b>app.buzz.share</b>
     <b>ctrip.english</b>
@@ -813,6 +820,8 @@
     <b>com.mobikeeper.sjgj</b>
     <b>com.tencent.videolite.android</b>
     <b>com.ubercab</b>
+    <b>com.google.android.apps.maps</b>
+    <b>com.ais.mimo.eservice</b>
     <c>com.smzdm.client.android</c>
     <c>app.buzz.share</c>
     <c>ctrip.english</c>
@@ -1213,4 +1222,8 @@
     <c>com.tencent.videolite.android</c>
     <c>com.ubercab</c>
     <c>com.tencent.mobileqq</c>
+    <c>com.google.android.apps.maps</c>
+    <c>com.ais.mimo.eservice</c>
+    <c>com.twitter.android</c>
+    <c>com.newb.videoPlayerc</c>
 </filter-conf>

@@ -9,13 +9,13 @@
         <!-- for aurisys_scene playback with smartpa for all mixed streamout -->
         <aurisys_scenario aurisys_scenario="AURISYS_SCENARIO_DSP_PLAYBACK_SMARTPA">
             <downlink_library_name_list digital_gain_lib_name="">
-                <library name="smartpa_awinic"/>
+                <library name="si_sixth"/>
             </downlink_library_name_list>
         </aurisys_scenario>
         <!-- for aurisys_scene call final for sph final process -->
         <aurisys_scenario aurisys_scenario="AURISYS_SCENARIO_DSP_CALL_FINAL">
             <downlink_library_name_list digital_gain_lib_name="">
-                <library name="smartpa_awinic"/>
+                <library name="si_sixth"/>
             </downlink_library_name_list>
         </aurisys_scenario>
         <!-- for aurisys_scene ktv for headphone feedback process -->
@@ -76,7 +76,7 @@
         <library name="si_sixth"
                  lib_path="/vendor/lib/libsi_sixth.so"
                  lib64_path="/vendor/lib64/libsi_sixth.so"
-                 param_path="/vendor/etc/aurisys_param/"
+                 param_path="/odm/etc/audio/sixth/"
                  lib_dump_path="AUTO"
                  adb_cmd_key="SIXTH">
             <components>
@@ -120,16 +120,16 @@
          * =====================================================================
         -->
         <library name="smartpa_awinic"
-                 lib_path="/odm/lib/libawinicsmartpaparse.so"
-                 lib64_path="/odm/lib64/libawinicsmartpaparse.so"
-                 param_path="/odm/etc/audio/awinic"
+                 lib_path="/vendor/lib/libawinicsmartpaparse.so"
+                 lib64_path="/vendor/lib64/libawinicsmartpaparse.so"
+                 param_path="/vendor/etc/smartpa_param"
                  lib_dump_path="AUTO"
                  adb_cmd_key="AWINIC">
             <components>
                 <!-- for aurisys_scene playback with smartpa -->
                 <component aurisys_scenario="AURISYS_SCENARIO_DSP_PLAYBACK_SMARTPA"
                            sample_rate="48000"
-                           audio_format="AUDIO_FORMAT_PCM_8_24_BIT"
+                           audio_format="AUDIO_FORMAT_PCM_16_BIT"
                            frame_size_ms="0"
                            b_interleave="1"
                            enable_log="0"
@@ -146,7 +146,7 @@
                 <!-- for aurisys_scene call final -->
                 <component aurisys_scenario="AURISYS_SCENARIO_DSP_CALL_FINAL"
                            sample_rate="48000"
-                           audio_format="AUDIO_FORMAT_PCM_8_24_BIT"
+                           audio_format="AUDIO_FORMAT_PCM_16_BIT"
                            frame_size_ms="0"
                            b_interleave="1"
                            enable_log="0"
@@ -266,4 +266,3 @@
         </library>
     </hal_librarys>
 </aurisys_config>
-

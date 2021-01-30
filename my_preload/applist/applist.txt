@@ -1,0 +1,12 @@
+com.realme.link:realme_Link_exp::true
+com.google.android.apps.nbu.paisa.user:GooglePayIndia::true
+com.facebook.appmanager:facebook-appmanager::true
+com.google.android.apps.docs:Drive::true
+com.google.android.apps.tachyon:Duo::true
+com.facebook.katana:Facebook::true
+com.google.ar.lens:Google_Lens::true
+com.google.android.apps.photos:Photos::true
+com.google.android.videos:Videos::true
+com.google.android.apps.youtube.music:YTMusic::true
+com.facebook.system:facebook-installer::true
+com.facebook.services:facebook-services::true

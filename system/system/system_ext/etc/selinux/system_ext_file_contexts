@@ -127,6 +127,7 @@
 /data/media/0/DCIM/Screenshots(/.*)?       u:object_r:media_rw_data_file:s0
 /sys/module/procmon/parameters(/.*)? u:object_r:sysfs_procmon:s0
 /sys/module/kneuron/parameters(/.*)?             u:object_r:sysfs_kneuron_elsa:s0
+/my_product/bin/mm-performance.sh  u:object_r:oppodebugtool_exec:s0
 /sys/devices/virtual/critical_log(/.*)?        u:object_r:sysfs_critical_log:s0
 /data/format_unclear/prerom_tempres(/.*)?    u:object_r:oppo_rusres_file:s0
 /data/engineermode/MediaResourceConfig(/.*)? u:object_r:data_engineer_mediaconfig_file:s0

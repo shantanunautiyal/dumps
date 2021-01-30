@@ -528,7 +528,7 @@ any software that is unrelated to enhancing end-user experience. -->
         </Activity>
     </Package>
     <Package name="com.truecaller">
-        <Activity name="com.oppo.contacts.importcontact.OppoImportProgressActivity">
+        <Activity name="Common">
             <data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_OPP" param1="0"></data>
             <data cmd="PERF_RES_POWERHAL_TOUCH_BOOST_DURATION" param1="1000000000"></data>
         </Activity>

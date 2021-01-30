@@ -419,6 +419,11 @@ oae.server.boot    u:object_r:oae_boot_prop:s0
 persist.kevent    u:object_r:oplus_kevents_prop:s0
 #endif /*COLOROS_EDIT*/
 
+#ifdef OPLUS_FEATURE_DEXOPT_STRATEGY
+#Taolicheng@ANDROID.PMS, 2020/09/03, add for collect dex2oat info
+persist.sys.dex2oat     u:object_r:exported_system_prop:s0
+#endif /*OPLUS_FEATURE_DEXOPT_STRATEGY*/
+
 #Jianrong.Zheng@AD.SELinux, 2018/09/27, Add for set partion property type
 ro.sys.reserve.integrate          u:object_r:exported_system_prop:s0
 

@@ -57,7 +57,7 @@
     </chooseSkipChoose>
 
     <crossAuthority>
-        <!-- <item name="media" /> -->
+        <item name="media" />
         <item name="mms" />
         <item name="downloads" />
         <item name="settings" />

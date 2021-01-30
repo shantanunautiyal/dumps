@@ -4,7 +4,6 @@
     <feature name="com.oppo.eng.otg.support" />
     <feature name="com.oppo.eng.sdcard.support" />
     <feature name="com.oppo.eng.type.c.support" />
-    <feature name="com.oppo.eng.pd.charger.support" />
     <feature name="com.oppo.eng.vooc.charger.support" />
     <feature name="com.oppo.eng.smallboard.detect.support" />
     <feature name="com.oppo.eng.a.smallboard.detect.support" />
@@ -20,7 +19,7 @@
     <feature name="com.oppo.eng.ship.mode.support" />
     <feature name="com.oppo.eng.battery.flag.support" />
     <feature name="com.oppo.eng.drm.widevine.support" />
-
+    <feature name="com.oppo.eng.hdcp.key.support" />
 
     <!-- Network feature -->
     <feature name="com.oppo.eng.sim.hot.swap.support" />

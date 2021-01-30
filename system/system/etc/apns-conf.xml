@@ -2950,6 +2950,21 @@
 <!-- Xinran.Li@PSW.NW.IMS, 2020/05/01, added for Yoigo operator request, end -->
 
 <!-- Hongyu.Bi@PSW.NW.DATA VENDOR_EDIT add for EU from Samsung S9 start  -->
+<!-- lijiang1@NETWORK.DATA.753381, 2020/12/05, modify apn for Movistar, start -->
+  <apn carrier="Movistar"
+      mcc="214"
+      mnc="05"
+      apn="telefonica.es"
+      user="telefonica"
+      password="telefonica"
+      authtype="1"
+      type="default,supl,mms"
+      mmsc="http://mms.movistar.com"
+      mmsproxy="10.138.255.5"
+      mmsport="8080"
+      protocol="IPV4V6"
+  />
+
   <apn carrier="Tuenti"
       mcc="214"
       mnc="05"
@@ -2960,8 +2975,11 @@
       mmsc="http://tuenti.com"
       mmsproxy="10.138.255.43"
       mmsport="8080"
+      mvno_type="spn"
+      mvno_match_data="Tuenti"
       type="default,supl,mms"
   />
+<!-- lijiang1@NETWORK.DATA.753381, 2020/12/05, modify apn for Movistar, end -->
 
  <apn carrier="internetand"
       mcc="214"
@@ -8744,14 +8762,14 @@
       type="mms"
   />
 
-  <apn carrier="TELE2 Internet"
+  <apn carrier="Tele2 Internet"
       mcc="250"
       mnc="20"
       apn="internet.tele2.ru"
       type="default,supl,xcap"
   />
 
-  <apn carrier="TELE2 MMS"
+  <apn carrier="Tele2 MMS"
       mcc="250"
       mnc="20"
       apn="mms.tele2.ru"
@@ -8762,7 +8780,7 @@
       type="mms"
   />
 
-  <apn carrier="IMS"
+  <apn carrier="Tele2 IMS"
       mcc="250"
       mnc="20"
       apn="ims.tele2.ru"
@@ -8779,6 +8797,37 @@
        protocol="IP"
        roaming_protocol="IP"
   />
+ 
+  <!-- Yanzhou.Chen@NETWORK.DATA.149756, 2020/12/23, for Russia operator 25027 APN. start -->
+   <apn carrier="Letai Internet"
+      mcc="250"
+      mnc="27"
+      apn="internet.letai.ru"
+      type="default"
+      protocol="IP"
+      roaming_protocol="IP"
+   />
+   <apn carrier="Letai MMS"
+      mcc="250"
+      mnc="27"
+      apn="mms"
+      type="mms"
+      mmsc="http://mmsc:8002"
+      mmsproxy="mmsc"
+      mmsport="8080"
+      protocol="IP"
+      roaming_protocol="IP"
+   />
+   <apn carrier="IMS"
+      mcc="250"
+      mnc="27"
+      apn="ims"
+      type="ims"
+      protocol="IP"
+      roaming_protocol="IP"
+   />
+
+  <!-- Yanzhou.Chen@RM.NW.DATA.149756, 2020/12/23, for Russia operator 25027 APN. end -->
 <!-- Zhenglanlan@NETWORK.DATA.APN.672308, 2020/11/21, modify as tele2 RU requirements, end -->
   <apn carrier="Megafon internet"
       mcc="250"
@@ -9826,6 +9875,7 @@
       roaming_protocol="IPV4V6"
   />
 
+  <!--
   <apn carrier="E-plus Intenet"
       mcc="262"
       mnc="03"
@@ -9835,7 +9885,6 @@
       type="default"
   />
 
-  <!--
   <apn carrier="E-Plus Web GPRS"
       mcc="262"
       mnc="03"
@@ -9866,7 +9915,7 @@
       type="default,supl,mms"
   />
 -->
-  <!--Wen.Ye@PSW.NW.IMS.2855810,2020/03/04, change carrier parameter from "O2 Internet" to "o2 Internet, start -->
+  <!-- lijiang1@NETWORK.DATA.3057587, 2020/09/17, 26203 APN same as 26207, start -->
   <apn carrier="o2 Internet"
       mcc="262"
       mnc="03"
@@ -9874,20 +9923,23 @@
       mmsc="http://10.81.0.7:8002"
       mmsproxy="82.113.100.5"
       mmsport="8080"
-      type="default,supl,mms"
+      type="default,supl,mms,xcap,ia"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
   />
-  <!--Wen.Ye@PSW.NW.IMS.2855810,2020/03/04, change carrier parameter from "O2 Internet" to "o2 Internet, end -->
 
-  <apn carrier="E-plus MMS"
+  <apn carrier="o2 Internet Prepaid"
       mcc="262"
       mnc="03"
-      apn="mms.eplus.de"
-      user="mms"
-      mmsc="http://mms/eplus/"
-      mmsproxy="212.23.97.153"
-      mmsport="5080"
-      type="mms"
+      apn="pinternet.interkom.de"
+      mmsc="http://10.81.0.7:8002"
+      mmsproxy="82.113.100.6"
+      mmsport="8080"
+      type="default,supl,mms,xcap,ia"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
   />
+  <!-- lijiang1@NETWORK.DATA.3057587, 2020/09/17, 26203 APN same as 26207, end -->
 
   <!--Add begain by wangjin4@oppo.com add for DE-O2 ims apn-->
   <apn carrier="o2 IMS"
@@ -9961,6 +10013,7 @@
       type="mms"
   />
 
+<!--
   <apn carrier="T-Mobile Internet"
       mcc="262"
       mnc="06"
@@ -9981,6 +10034,48 @@
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
   />
+-->
+<!-- lijiang1@NETWORK.DATA.45338, 2020/12/15, Modify DT apn, start -->
+  <apn carrier="Telekom Internet"
+      mcc="262"
+      mnc="06"
+      apn="internet.v6.telekom"
+      user="telekom"
+      password="telekom"
+      type="default,supl"
+      protocol="IPV4V6"
+      roaming_protocol="IP"
+      authtype="1"
+  />
+
+  <apn carrier="HOS"
+      mcc="262"
+      mnc="06"
+      apn="hos"
+      type="mms,xcap"
+      user="telekom"
+      password="telekom"
+      mmsc="http://mms.t-mobile.de/servlets/mms"
+      mmsproxy="109.237.176.193"
+      mmsport="8008"
+      protocol="IPV4V6"
+      roaming_protocol="IP"
+      authtype="1"
+      user_visible="false"
+      bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+
+  <apn carrier="Telekom Deutschland"
+      mcc="262"
+      mnc="06"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+      user_visible="false"
+  />
+<!-- lijiang1@NETWORK.DATA.45338, 2020/12/15, Modify DT apn, end -->
   <!-- ZhaoJi.Yang@PSW.NW.DATA VENDOR_EDIT add for DE 2565423 apn issue start  -->
   <!--Wen.Ye@PSW.NW.IMS.2855810,2020/03/04, change carrier parameter from "O2 Internet" to "o2 Internet, start -->
   <apn carrier="o2 Internet"
@@ -10073,15 +10168,40 @@
       type="mms"
   />
 
-  <apn carrier="o2"
+  <!-- lijiang1@NETWORK.DATA.3057587, 2020/12/05, 26211 APN same as 26207, start -->
+  <apn carrier="o2 Internet"
       mcc="262"
       mnc="11"
       apn="internet"
       mmsc="http://10.81.0.7:8002"
       mmsproxy="82.113.100.5"
       mmsport="8080"
-      type="default,supl,mms,xcap"
+      type="default,supl,mms,xcap,ia"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
   />
+
+  <apn carrier="o2 Internet Prepaid"
+      mcc="262"
+      mnc="11"
+      apn="pinternet.interkom.de"
+      mmsc="http://10.81.0.7:8002"
+      mmsproxy="82.113.100.6"
+      mmsport="8080"
+      type="default,supl,mms,xcap,ia"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+
+  <apn carrier="o2 IMS"
+      mcc="262"
+      mnc="11"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <!-- lijiang1@NETWORK.DATA.3057587, 2020/12/05, 26211 APN same as 26207, end -->
 
   <!-- chenguoyao@PSW.NW.IMS.NA, 2019/11/12, add for IMS requirement begin  -->
   <apn carrier="Vodafone DE IMS"
@@ -14467,7 +14587,75 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
+<!-- Haicheng.Wu@PSW.NW.DATA.669817, add tecel mvno apn  start-->
+  <apn carrier="Alo"
+      mcc="334"
+      mnc="020"
+      apn="internet.alo.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Alo"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+
+  <apn carrier="Bueno Cell"
+      mcc="334"
+      mnc="020"
+      apn="internet.mvne1.com"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Bueno Cell"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+    <apn carrier="FreedomPop"
+      mcc="334"
+      mnc="020"
+      apn="internet.mvne1.com"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="FreedomPop"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+    <apn carrier="Oxxo Cel"
+      mcc="334"
+      mnc="020"
+      apn="internet.mvne1.com"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Oxxo Cel"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+    <apn carrier="OUI móvil"
+      mcc="334"
+      mnc="020"
+      apn="internet.mvne1.com"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="OUI"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+    <apn carrier="Soriana Móvil"
+      mcc="334"
+      mnc="020"
+      apn="internet.soriana.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Soriana Móvil"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+<!-- Haicheng.Wu@PSW.NW.DATA.669817, add tecel mvno apn  end-->
+
+
+
+
 <!-- shaoyifu@ODM_HQ.Network, 2019/12/11, modify Movistar INTERNET apn for RTC 2676012 begin-->
+<!-- Haicheng.Wu@PSW.NW.DATA.669817, Modify for Mexico  Movistar apn change begin  , not set read_only -->
   <apn carrier="Movistar INTERNET"
       mcc="334"
       mnc="030"
@@ -14478,10 +14666,10 @@
       type="default"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
-      read_only="true"
   />
 <!-- shaoyifu@ODM_HQ.Network, 2019/12/11, modify Movistar INTERNET apn for RTC 2676012 end-->
 
+<!-- Haicheng.Wu@PSW.NW.DATA.669817, Modify for Mexico  Movistar apn change begin  , not set read_only , set authtype 1 -->
   <apn carrier="Movistar MMS"
       mcc="334"
       mnc="030"
@@ -14492,9 +14680,9 @@
       user="movistar"
       password="movistar"
       type="mms"
+      authtype="1"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
-      read_only="true"
   />
 
   <apn carrier="IMS"
@@ -14507,13 +14695,121 @@
       bearer_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19"
   />
 
+
+  <!-- Haicheng.Wu@PSW.NW.DATA.669817, add movistar mvno apn  start-->
+  <apn carrier="Cierto"
+      mcc="334"
+      mnc="030"
+      apn="internet.cierto.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Cierto"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+
+  <apn carrier="Flash Mobile"
+      mcc="334"
+      mnc="030"
+      apn="internet.flashmobile.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Flash Mobile"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+
+  <apn carrier="Maz Tiempo"
+      mcc="334"
+      mnc="030"
+      apn="internet.maztiempo.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Maz Tiempo"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Qbocel"
+      mcc="334"
+      mnc="030"
+      apn="internet.qbocel.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Qbocel"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Simpati Mobile"
+      mcc="334"
+      mnc="030"
+      apn="internet.simpati.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Simpati Mobile"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Simplii"
+      mcc="334"
+      mnc="030"
+      apn="internet.simplii.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Simplii"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Tokamovil"
+      mcc="334"
+      mnc="030"
+      apn="internet.tokamovil.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Tokamovil"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Tuenti"
+      mcc="334"
+      mnc="030"
+      apn="internet.tuenti.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Tuenti"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Virgin Mobile"
+      mcc="334"
+      mnc="030"
+      apn="internet.virginmobile.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Virgin Mobile"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Weex"
+      mcc="334"
+      mnc="030"
+      apn="internet.weex.mx"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Weex"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <!-- Haicheng.Wu@PSW.NW.DATA.669817, add movistar mvno apn  end-->
+
+
+<!-- kangjin@NETWORK.DATA.431720, 2020/11/28, AT&T APN is not correct -->
   <apn carrier="Internet"
       mcc="334"
       mnc="050"
-      apn="web.iusacellgsm.mx"
+      apn="web.attmex.mx"
       type="default"
       protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
+      roaming_protocol="IP"
       read_only="true"
   />
 
@@ -14525,26 +14821,26 @@
       mmsproxy="129.192.129.104"
       mmsport="8080"
       type="mms"
-      protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
-      read_only="true"
+      protocol="IP"
   />
+
   <apn carrier="Modem"
       mcc="334"
       mnc="050"
       apn="modem.attmex.mx"
       type="dun"
-      protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
+      protocol="IP"
+      roaming_protocol="IP"
       read_only="true"
   />
-  <apn carrier="Supl"
+  <apn carrier="Location"
       mcc="334"
       mnc="050"
       apn="supl.attmex.mx"
       type="supl"
-      protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
+      protocol="IP"
+      roaming_protocol="IP"
+      user_visible="false"
       read_only="true"
   />
 
@@ -14564,30 +14860,42 @@
       apn="wap.attmex.mx"
       type="default"
       protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
-      read_only="true"
+      roaming_protocol="IP"
   />
 
-  <apn carrier="Modem Nextel"
+  <apn carrier="MMS"
       mcc="334"
       mnc="090"
-      apn="modem.nexteldata.com.mx"
-      type="default"
-      protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
-  />
-
-  <apn carrier="Nextel MMS"
-      mcc="334"
-      mnc="090"
-      apn="mms.nexteldata.com.mx"
-      mmsc="http://3gmms.nexteldata.com.mx"
+      apn="mms.attmex.mx"
+      mmsc="http://mms.att.com.mx"
       mmsproxy="129.192.129.104"
       mmsport="8080"
       type="mms"
-      protocol="IPV4V6"
-      roaming_protocol="IPV4V6"
+      protocol="IP"
+      roaming_protocol="IP"
   />
+
+<apn carrier="Modem"
+      mcc="334"
+      mnc="090"
+      apn="modem.attmex.mx"
+      type="dun"
+      protocol="IP"
+      roaming_protocol="IP"
+      read_only="true"
+  />
+
+<apn carrier="Location"
+      mcc="334"
+      mnc="090"
+      apn="location.attmex.mx"
+      type="supl"
+      protocol="IP"
+      roaming_protocol="IP"
+      read_only="true"
+      user_visible="false"
+  />
+<!-- kangjin@NETWORK.DATA.431720, 2020/11/28, AT&T APN is not correct -->
 
   <apn carrier="Internet"
       mcc="334"
@@ -14608,6 +14916,136 @@
       read_only="true"
   />
 <!-- Guangzhi.Deng@PSW.NW.DATA.2342596, 2019/11/06, Modify for Mexico apn change start  -->
+
+<!-- Haicheng.Wu@PSW.NW.DATA.669817, add 334140 mms apn start -->
+  <apn carrier="MMS"
+      mcc="334"
+      mnc="140"
+      apn="mms.altan"
+      authtype="0"
+      mmsc="http://10.172.10.10/mmsc/MMS"
+      mmsport="8080"
+      type="mms"
+      protocol="IP"
+      roaming_protocol="IP"
+      read_only="true"
+  />
+<!-- Haicheng.Wu@PSW.NW.DATA.669817, add 334140 mms apn end-->
+
+  <!-- Haicheng.Wu@PSW.NW.DATA.669817, add Altan mvno apn  start-->
+  <apn carrier="AlmaTel"
+      mcc="334"
+      mnc="140"
+      apn="internet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="AlmaTel"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Blue Telecomm"
+      mcc="334"
+      mnc="140"
+      apn="internet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Blue Telecomm"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="GuruComm"
+      mcc="334"
+      mnc="140"
+      apn="ininternet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="GuruComm"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Izzi Flex y Pocket"
+      mcc="334"
+      mnc="140"
+      apn="internet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Izzi Flex y Pocket"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Netwey"
+      mcc="334"
+      mnc="140"
+      apn="internet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Netwey"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Newww"
+      mcc="334"
+      mnc="140"
+      apn="internet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Newww"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Retemex"
+      mcc="334"
+      mnc="140"
+      apn="internet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Retemex"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="MegaMovil"
+      mcc="334"
+      mnc="140"
+      apn="internet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="MegaMovil"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="IENTC"
+      mcc="334"
+      mnc="140"
+      apn="internet.altan"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="IENTC"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="WALMART"
+      mcc="334"
+      mnc="140"
+      apn="internet.wm.com"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="BAIT"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <apn carrier="Magamovil"
+      mcc="334"
+      mnc="140"
+      apn="mega45g.com"
+      type="default"
+      mvno_type="spn"
+      mvno_match_data="Magamovil"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+  <!-- Haicheng.Wu@PSW.NW.DATA.669817, add Altan mvno apn  end-->
+
+
   <apn carrier="Orange World"
       mcc="340"
       mnc="01"
@@ -15006,6 +15444,18 @@
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
       type="mms"
+  />
+
+  <apn carrier="Vodafone live"
+      mcc="404"
+      mnc="11"
+      apn="portalnmms"
+      proxy="10.10.1.100"
+      port="9401"
+      type="default,supl"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      user_visible="false"
   />
 
   <apn carrier="Vodafone MMS"
@@ -20243,7 +20693,8 @@
         mnc="04"
         type="default,supl"
     />
-    <apn carrier="Airtel Internet new"
+<!--Mohit.Rewtani@PSW.NW.DATA.665973,2020/11/20,modify airtel apn name,mms apn mmsproxy and mmsc. begin-->
+    <apn carrier="Airtel Internet"
         mcc="413"
         mnc="05"
         apn="airtellive"
@@ -20251,13 +20702,13 @@
         type="default,supl"
     />
 
-    <apn carrier="Airtel MMS new"
+    <apn carrier="Airtel MMS"
         mcc="413"
         mnc="05"
         apn="airtellive"
-        mmsproxy="10.200.184.86"
+        mmsproxy="10.200.252.57"
         mmsport="8080"
-        mmsc="http://mmsc/"
+        mmsc="http://mmscvip/"
         type="mms"
     />
 <!--Mohit.Rewtani@PSW.NW.DATA.665973,2020/11/20,modify airtel apn name,mms apn mmsproxy and mmsc. end-->
@@ -21959,6 +22410,8 @@
       authtype="1"
   />
 <!-- amit.jaiswal@PSW.NW.DATA.2726562, 2020/04/16, Update the APN protocol for Vinaphone operator  , end -->
+  <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+  <!-- Lixinran@NETWORK.IMS.685178, 2020/11/24, solve the problem that 45202 sim card can not register VoWiFi -->
   <apn carrier="Viettel-IMS"
       mcc="452"
       mnc="02"
@@ -21966,7 +22419,9 @@
       type="ims"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
+      network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
   />
+  <!-- #endif /*OPLUS_BUG_COMPATIBILITY*/ -->
 
   <apn carrier="Viettel-xcap"
       mcc="452"
@@ -21996,6 +22451,8 @@
   />
   <!--#ifdef VENDOR_EDIT-->
   <!--chenguoyao@PSW.NW.IMS,2019/07/25, update Viettel ims apn and xcap apn-->
+  <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+  <!-- Lixinran@NETWORK.IMS.685196, 2020/11/24, solve the problem that 45204 sim card can not register VoWiFi -->
   <apn carrier="IMS"
       mcc="452"
       mnc="04"
@@ -22003,7 +22460,9 @@
       type="ims"
       protocol="IPV4V6"
       roaming_protocol="IPV4V6"
+      network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
   />
+  <!-- #endif /*OPLUS_BUG_COMPATIBILITY*/ -->
 
   <apn carrier="XCAP"
       mcc="452"
@@ -23213,7 +23672,42 @@
       apn="default"
       type="default,supl"
   />
+<!--Yingjun.Tian@NETWORK.DATA.695470, 2020/11/25, start -->
+  <apn carrier="ltcnet"
+      mcc="457"
+      mnc="01"
+      apn="ltcnet"
+      type="default,supl"
+      protocol="IP"
+      roaming_protocol="IP"
+  />
 
+  <apn carrier="etlnet"
+      mcc="457"
+      mnc="02"
+      apn="etlnet"
+      type="default,supl"
+      protocol="IP"
+      roaming_protocol="IP"
+  />
+
+  <apn carrier="unitel3g"
+      mcc="457"
+      mnc="03"
+      apn="unitel3g"
+      type="default,supl"
+      protocol="IP"
+      roaming_protocol="IP"
+  />
+  <apn carrier="Tplus"
+      mcc="457"
+      mnc="08"
+      apn="Tplus"
+      type="default"
+      protocol="IP"
+      roaming_protocol="IP"
+  />
+<!--Yingjun.Tian@NETWORK.DATA.695470, 2020/11/25, end -->
   <apn carrier="CMNET"
       mcc="460"
       mnc="00"
@@ -26579,7 +27073,11 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       type="ims"
       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
   />
+<!-- OPLUS_BUG_COMPATIBILITY -->
 
+  <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+  <!--guliyun@NETWORK.DATA,129082, 2020/12/05, delete Nextel APN for Entel operator-->
+  <!--
   <apn carrier="NEXTEL"
        mcc="716"
        mnc="17"
@@ -26589,6 +27087,8 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
        mmsport="8080"
        type="mms"
   />
+  -->
+  <!-- #endif OPLUS_BUG_COMPATIBILITY -->
 <!--wangyong@NETWORK.DATA.70612,2020/9/22, Add Bitel Peru APN end-->
 
   <apn carrier="Movistar INTERNET"
@@ -26693,20 +27193,23 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
         roaming_protocol="IPV4V6"
     />
 
+    <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+    <!--guliyun@NETWORK.DATA.121520, 2020/12/2, APN “TIM MMS” is incorrectly-->
     <apn carrier="TIM MMS"
         mcc="724"
         mnc="03"
-        apn="tim.br"
-        authtype="3"
+        apn="mms.tim.br"
+        authtype="1"
         mmsc="http://mms.tim.br"
         mmsport="8080"
-        mmsproxy="200.179.66.242"
+        mmsproxy="189.40.191.96"
         password="TIM"
         type="mms"
         user="TIM"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
     />
+    <!-- #endif OPLUS_BUG_COMPATIBILITY -->
 
     <apn carrier="TIM Internet"
         mcc="724"
@@ -26720,20 +27223,23 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
         roaming_protocol="IPV4V6"
     />
 
+    <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+    <!--guliyun@NETWORK.DATA.121520, 2020/12/2, APN “TIM MMS” is incorrectly-->
     <apn carrier="TIM MMS"
         mcc="724"
         mnc="04"
-        apn="tim.br"
-        authtype="3"
+        apn="mms.tim.br"
+        authtype="1"
         mmsc="http://mms.tim.br"
         mmsport="8080"
-        mmsproxy="200.179.66.242"
+        mmsproxy="189.40.191.96"
         password="TIM"
         type="mms"
         user="TIM"
         protocol="IPV4V6"
         roaming_protocol="IPV4V6"
     />
+    <!-- #endif OPLUS_BUG_COMPATIBILITY -->
 
     <apn carrier="Claro Foto"
         mcc="724"
@@ -27537,6 +28043,17 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       authtype="1"
       type="mms"
   />
+<!-- wangxinyuan@PSW.NW.IMS.824055, 2020/12/20, add for IMS requirement begin  -->
+  <apn carrier="IMS"
+      mcc="732"
+      mnc="101"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+<!-- wangxinyuan@PSW.NW.IMS.824055, 2020/12/20, add for IMS requirement   end  -->
   <apn carrier="Movistar INTERNET"
       mcc="732"
       mnc="102"
@@ -27640,6 +28157,25 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       mvno_match_data="UNE"
       mvno_type="spn"
   />
+  <apn carrier="IMS"
+       mcc="732"
+       mnc="103"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+
+  <apn carrier="HOS"
+       mcc="732"
+       mnc="103"
+       apn="hos"
+       type="xcap"
+       protocol="IP"
+       roaming_protocol="IP"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
   <apn carrier="TIGO WEB"
       mcc="732"
       mnc="111"
@@ -27663,6 +28199,26 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       mcc="732"
       mnc="111"
       apn="internet.flashmobile.omv"
+  />
+<!-- wangxinyuan@PSW.NW.IMS, 2020/12/20, add for IMS requirement begin  -->
+  <apn carrier="IMS"
+       mcc="732"
+       mnc="111"
+       apn="ims"
+       type="ims"
+       protocol="IPV4V6"
+       roaming_protocol="IPV4V6"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+<!-- wangxinyuan@PSW.NW.IMS, 2020/12/20, add for IMS requirement  end  -->
+  <apn carrier="HOS"
+       mcc="732"
+       mnc="111"
+       apn="hos"
+       type="xcap"
+       protocol="IP"
+       roaming_protocol="IP"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
   />
   <apn carrier="Internet Movil"
       mcc="732"
@@ -27690,12 +28246,41 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       mnc="123"
       apn="web.vmc.net.co"
   />
+<!-- wangxinyuan@PSW.NW.IMS, 2020/12/20, add for IMS requirement begin  -->
+  <apn carrier="IMS"
+      mcc="732"
+      mnc="123"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <apn carrier="HOS"
+       mcc="732"
+       mnc="123"
+       apn="hos"
+       type="xcap"
+       network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  
+<!-- wangxinyuan@PSW.NW.IMS, 2020/12/20, add for IMS requirement  end  -->
   <apn carrier="Avantel LTE"
       mcc="732"
       mnc="130"
       apn="lte.avantel.com.co"
       type="default,supl"
   />
+<!-- wangxinyuan@PSW.NW.IMS, 2020/12/20, add for IMS requirement begin  -->
+  <apn carrier="IMS"
+      mcc="732"
+      mnc="130"
+      apn="ims.avt.com"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+  />
+<!-- wangxinyuan@PSW.NW.IMS, 2020/12/20, add for IMS requirement  end  -->
   <apn carrier="ETB 4G"
       mcc="732"
       mnc="187"
@@ -28224,13 +28809,17 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       authtype="1"
       type="mms"
   />
+  <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+  <!-- Shilong.Pei@NETWORK.IMS.701866, 2020/11/27, Change ims apn protocol -->
   <apn carrier="ISAT IMS"
       mcc="510"
       mnc="01"
       apn="ims"
       type="ims"
-      protocol="IP"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
   />
+  <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
   <apn carrier="internet"
       mcc="510"
       mnc="11"
@@ -28251,7 +28840,17 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       mmsport="8080"
       type="mms"
   />
-
+  <!-- wangxinyuan@PSW.NW.IMS.777790, 2020/12/15, add for IMS requirement begin  -->
+  <apn carrier="IMS"
+      mcc="510"
+      mnc="11"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- wangxinyuan@PSW.NW.IMS.777790, 2020/12/15, add for IMS requirement end    -->
   <apn carrier="ISAT M3 INTERNET"
       mcc="510"
       mnc="21"
@@ -28310,7 +28909,17 @@ difference in APN profile of MyRepublic and StarHub. it was causing ID miss matc
       mmsport="8080"
       type="mms"
   />
-
+  <!-- wangxinyuan@PSW.NW.IMS.777790, 2020/12/15, add for IMS requirement begin  -->
+  <apn carrier="IMS"
+      mcc="510"
+      mnc="08"
+      apn="ims"
+      type="ims"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
+      network_type_bitmask="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20"
+  />
+  <!-- wangxinyuan@PSW.NW.IMS.777790, 2020/12/15, add for IMS requirement end    -->
   <apn carrier="Smartfren4G"
       mcc="510"
       mnc="28"

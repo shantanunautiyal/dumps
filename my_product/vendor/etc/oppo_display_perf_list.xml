@@ -6,13 +6,10 @@
     <filter-name>oppo_display_perf_list</filter-name>
 
     <name>sf.dps.feature</name>
-    <flag>0xF64E3,0,0,0x1,0,0,0,0</flag>
+    <flag>0xF64E3,0,0,0,0,0,0,0</flag>
     <!--eFeatureRv + eFeatureDpp + eFeatureHecate + eFeatureDC + eFeatureDisableToneMapping-->
     <!--eFeatureMaskKtv + eFeatureMaskAD + eFeatureMaskDFps + eFeatureMaskOnline-->
     <!--eFeatureGift -->
-
-    <name>com.android.settings</name>
-    <flag>0,0x1,0,0,0,0,0,0,0,0</flag>
 
     <name>system_server</name>
     <flag>0,0,0,0,0,0,0,0,0,0</flag>
@@ -1409,6 +1406,7 @@
 
     <name>com.maimiao.live.tv</name>
     <flag>0x40,0,0,0,0,0,0,0</flag>
+
 
     <name>com.happyelements.AndroidAnimal.qq</name>
     <flag>0x40,0,0,0,0,0,0,0</flag>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <filter-conf>
-  <version>20201110</version>
+  <version>20201205</version>
   <isOpen>true</isOpen>
   <filter-name>Multimedia_Daemon_List</filter-name>
     <ktv_whitelist>
@@ -185,6 +185,9 @@
 
         <name>com.realme.link</name>
         <attribute>permit</attribute>
+
+        <name>com.oppo.sos</name>
+        <attribute>permit</attribute>
     </volume>
 
     <control>
@@ -341,10 +344,16 @@
         <name>com.tencent.mobileqq</name>
         <attribute>null</attribute>
 
+        <name>com.tencent.mobileqq:video</name>
+        <attribute>null</attribute>
+
         <name>com.whatsapp</name>
         <attribute>null</attribute>
 
         <name>com.zing.zalo</name>
+        <attribute>null</attribute>
+
+        <name>com.baidu.BaiduMap</name>
         <attribute>null</attribute>
     </speakerOff-in-scoOn>
 
@@ -624,6 +633,8 @@
         <name>com.dts.freefireth</name>
         <attribute>1</attribute>
 
+        <name>com.qiyi.video</name>
+        <attribute>2</attribute>
         <name>com.tencent.tmgp.pubgm</name>
         <attribute>2</attribute>
         <name>com.wedobest.paino.near.gamecenter</name>
@@ -1736,6 +1747,86 @@
         <attribute>1</attribute>
     </not-Silence-Record>
 
+    <playbackcapture-record-communication>
+        <name>com.tencent.tmgp.pubgmhd</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.tmgp.sgame</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.tmgp.cf</name>
+        <attribute>null</attribute>
+
+        <name>com.netease.hyxd.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.cldts</name>
+        <attribute>null</attribute>
+
+        <name>com.qqgame.mic</name>
+        <attribute>null</attribute>
+
+        <name>com.crisisfire.android.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.ddianle.lovedance.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.wali.xmcs.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.tmgp.speedmobile</name>
+        <attribute>null</attribute>
+
+        <name>com.gbits.atm.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.miHoYo.bh3.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.KiHan</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.shootgame</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.tmgp.tstl</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.tmgp.dragonnest</name>
+        <attribute>null</attribute>
+
+        <name>com.miHoYo.bh3.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.wod</name>
+        <attribute>null</attribute>
+
+        <name>com.zlongame.yjqy.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.tencent.tmgp.jxqy</name>
+        <attribute>null</attribute>
+
+        <name>com.netease.dhxy.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.netease.onmyoji.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.wanmei.zhuxian.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.netease.my.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.netease.l10.nearme.gamecenter</name>
+        <attribute>null</attribute>
+
+        <name>com.netease.moba.nearme.gamecenter</name>
+        <attribute>null</attribute>
+    </playbackcapture-record-communication>
+
     <getOppoAtlasService>
         <name>OnlyForTest</name>
         <attribute>forbid</attribute>
@@ -2061,6 +2152,17 @@
         <attribute>null</attribute>
     </set-magicvoice-parameters>
 
+    <smart-volume>
+        <name>wechat_db_level</name>
+        <attribute>19</attribute>
+
+        <name>wechat_dynamic_mode</name>
+        <attribute>1</attribute>
+
+        <name>com.tencent.mm</name>
+        <attribute>1</attribute>
+    </smart-volume>
+
     <start-sco-delay>
         <name>com.imo.android.imoim</name>
         <attribute>10</attribute>
@@ -2310,4 +2412,29 @@
         <name>com.oppo.camera</name>
         <attribute>null</attribute>
     </disable-stop-timeus>
+
+    <audio-bitrate-control>
+        <name>com.oppo.camera</name>
+        <attribute>320000</attribute>
+    </audio-bitrate-control>
+
+    <mediaplayer-recycle>
+        <name>cn.swiftpass.enterprise.wft.cmb</name>
+        <attribute>null</attribute>
+
+        <name>cn.swiftpass.enterprise.wft.cmb:live_service</name>
+        <attribute>null</attribute>
+
+        <name>cn.swiftpass.enterprise.hsbank</name>
+        <attribute>null</attribute>
+
+        <name>cn.swiftpass.enterprise.hsbank:live_service</name>
+        <attribute>null</attribute>
+
+        <name>cn.swiftpass.enterprise.v3.fjnx</name>
+        <attribute>null</attribute>
+
+        <name>cn.swiftpass.enterprise.v3.fjnx:live_service</name>
+        <attribute>null</attribute>
+    </mediaplayer-recycle>
 </filter-conf>

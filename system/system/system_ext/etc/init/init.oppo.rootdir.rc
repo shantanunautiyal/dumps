@@ -107,6 +107,10 @@ on post-fs-data
     mkdir /data/oppo/log/DCS/de/thermal 0777 system system
     mkdir /data/oppo/log/DCS/en/thermal 0777 system system
 
+    #ifdef OPLUS_FEATURE_WIFI_CONNECTFAILED
+    mkdir /data/oppo/log/DCS/en/dcs/netlog 0777 system system
+    #endif /* OPLUS_FEATURE_WIFI_CONNECTFAILED */
+
     #Liangxiang.Liu@AD.Power.PowerMonitor, 2018/02/08, Add for wakeup_stastisc reset
     chown system system /sys/kernel/wakelock_profiler/wakeup_stastisc_reset
     chown system system /sys/kernel/wakelock_profiler/active_max

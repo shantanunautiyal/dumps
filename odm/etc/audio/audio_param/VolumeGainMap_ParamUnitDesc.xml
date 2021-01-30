@@ -20,7 +20,6 @@
 			<Category name="BT" alias="BT earphone"/>
 			<Category name="TTY" alias="Tty_VCO_Handset,Tty_VCO_Handsfree"/>
 			<Category name="USB" alias="USB Headset,Usb_Headset"/>
-			<Category name="HEARING_AID" alias="HEARING_AID"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>

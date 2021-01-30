@@ -57,8 +57,8 @@
     <feature name="oppo.ap.sta.concurrency.support" />
     <feature name="oppo.childspace.support" />
     <feature name="oppo.wlan.privateDns.support" />
-    <feature name="oppo.wlan.dualsta.support"/>
     <feature name="oppo.common_center.wlan.assistant" />
+    <feature name="oppo.narrow.bezel.support" />
     <feature name="oppo.network.tempdds.support" />
   <feature name="oppo.feature.gamejoystick.support" />
   <feature name="oppo.feature.inputmethod.default.vibrate.depress" />
