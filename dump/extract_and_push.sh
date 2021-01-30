@@ -266,8 +266,8 @@ sudo chmod -R u+rwX ./*
 
 # Generate all_files.txt
 find . -type f -printf '%P\n' | sort | grep -v ".git/" >./all_files.txt
-git config user.name "SamarV-121"
-git config user.email "samarvispute121@gmail.com"
+git config --global user.name "SamarV-121"
+git config --global user.email "samarvispute121@gmail.com"
 
 gpush() {
 	find . -size +97M -printf '%P\n' -o -name '*sensetime*' -printf '%P\n' -o -iname '*Megvii*' -printf '%P\n' -o -name '*.lic' -printf '%P\n' -o -name '*zookhrs*' -printf '%P\n' -printf '%P\n' -o -name 'extract_and_push.sh' >.gitignore
