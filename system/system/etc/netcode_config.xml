@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright (c) 2013-2014 Qualcomm Technologies, Inc.  All Rights Reserved.
+** Qualcomm Technologies Proprietary and Confidential.
+*/
+-->
+<!-- use empty string to specify no proxy or port -->
+<!-- If you edit this version, also edit the version in the partner-supplied
+    netcode_config.xml configuration file -->
+<!-- #ifndef VENDOR_EDIT -->
+<!-- DeDong.Wei@EXP.CommService.Telephony.Reg, 2016/08/19, Modify for[cancel NP mcc code in India]-->
+<!-- #endif VENDOR_EDIT -->
+
+<netcode version="20190222">
+    <in_list region="IN">
+        <whitelist>
+        </whitelist>
+        <blacklist>
+            <plmn country="0d31d2fb5064c9b4" mcc="ac2a152c8aca4c81" mnc="32670efe0d7619c5" category="930c8c3874dd5773"/>
+            <plmn country="efe0dec6de84dcb1" mcc="0b171e1972d308d3" mnc="32670efe0d7619c5" category="930c8c3874dd5773"/>
+            <plmn country="e1793517ad6b98f9" mcc="1910db1bb37ed06c" mnc="32670efe0d7619c5" category="930c8c3874dd5773"/>
+            <plmn country="bf1d725b86ccbbda" mcc="fd3242c23b4e3a00" mnc="32670efe0d7619c5" category="930c8c3874dd5773"/>
+            <plmn country="38182a3a8880149a" mcc="5cec7de36a2e052e" mnc="32670efe0d7619c5" category="930c8c3874dd5773"/>
+        </blacklist>
+    </in_list>
+
+    <testcu_list region="testcu" >
+        <whitelist>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="db53ebb6466ee8a6" category="472e2f766525d86e"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="b2479687d89f8e6c" category="472e2f766525d86e"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="65ae52fd01e76bb6" category="472e2f766525d86e"/>
+        </whitelist>
+        <blacklist>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="6af767b2febaa903" category="930c8c3874dd5773"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="8740d5aa52f239cf" category="930c8c3874dd5773"/>
+        </blacklist>
+    </testcu_list>
+
+    <testcmcc_list region="testcmcc">
+        <whitelist>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="6af767b2febaa903" category="472e2f766525d86e"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="8740d5aa52f239cf" category="472e2f766525d86e"/>
+        </whitelist>
+        <blacklist>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="db53ebb6466ee8a6" category="930c8c3874dd5773"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="b2479687d89f8e6c" category="930c8c3874dd5773"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="65ae52fd01e76bb6" category="930c8c3874dd5773"/>
+        </blacklist>
+    </testcmcc_list>
+
+    <testall_list region="testall">
+        <whitelist>
+        </whitelist>
+        <blacklist>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="6af767b2febaa903" category="930c8c3874dd5773"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="8740d5aa52f239cf" category="930c8c3874dd5773"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="db53ebb6466ee8a6" category="930c8c3874dd5773"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="b2479687d89f8e6c" category="930c8c3874dd5773"/>
+            <plmn country="578b637e60d66f33" mcc="d54f2b749050059d" mnc="65ae52fd01e76bb6" category="930c8c3874dd5773"/>
+        </blacklist>
+    </testall_list>
+    <endcode>
+    </endcode>
+</netcode>
