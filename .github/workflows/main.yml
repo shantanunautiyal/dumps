@@ -16,8 +16,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Cleanup space
+      uses: rokibhasansagar/slimhub_actions@main
+
     - name: Setup
       run: |
+       sudo apt-get -qq -y update
        sudo apt-get install -y python3-setuptools
        curl -s https://raw.githubusercontent.com/AndroidDumps/dumpyara/master/setup.sh | bash
 
