@@ -1,0 +1,341 @@
+[
+	{
+		"VendorTag": "com.oppo.eng.flash.light.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.rear.single.flash.light.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.flash.light.front.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.flash.light.calibrate.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.flash.light.auto.calibrate.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.second.back.camera.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.third.rear.camera.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.fourth.rear.camera.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.new.triple.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.new.triple.verificate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.interference.video.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.ois.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.focus.motor.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.ae.sync.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.ois.noise.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.pdaf.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.laser.focus.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.third.rear.camera.ois.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.eis.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.aperture.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.tof.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.tof.depth.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.tof.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.tof.verificate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.ir.camera.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.ir.camera.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.dual.calibrate.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.dual.verificate.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.triple.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.triple.verificate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.zoom.loop.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.arcsoft.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.arcsoft.verificate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.aftersale.top.tip.array",
+		"Value": "543,280"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.aftersale.bottom.tip.array",
+		"Value": "543,1180"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.triple.calibrate.aftersale.focus.lens",
+		"Value": "3000"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.dual.calibrate.aftersale.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.triple.calibrate.aftersale.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibration.rear.size",
+		"Value": "4000x3000"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibrate.second.rear.size",
+		"Value": "2304x1728"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibrate.third.rear.size",
+		"Value": "4000x3000"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.portrait.size",
+		"Value": "4000x3000"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.ae.sync.rear.size",
+		"Value": "4000x3000"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.ae.sync.second.rear.size",
+		"Value": "3264x2448"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.ae.sync.third.rear.size",
+		"Value": "4000x3000"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.dual.calibration.input.yuv.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.dual.calibration.buffer.lost.support",
+		"Value": "1"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.aftersale.chart.size.array",
+		"Value": "262,442,817,997"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.second.rear.flash.light.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.third.rear.flash.light.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.fourth.rear.flash.light.calibrate.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibration.performance",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.portrait.fullbody.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.hidl.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibrate.project.name",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibration.algo",
+		"Value": "cp"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibration.params.name",
+		"Value": "CalibrationOppoC.json"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.verification.params.name",
+		"Value": "VerificationOppoC.json"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibration.yshift",
+		"Value": "10.15"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibration.zshift",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.calibration.roll",
+		"Value": "1.45"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.oiscalibration.params.name",
+		"Value": ""
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.oiscalibration.rear.size",
+		"Value": "4608x3456"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.oiscalibrate.second.rear.size",
+		"Value": "2592x1940"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.oisverification.params.name",
+		"Value": ""
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.laser.focus.aging.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.supervideo.support",
+		"Value": "0"
+	},
+
+	{
+		"VendorTag": "com.oppo.eng.camera.sfr.force.jpeg.support",
+		"Value": "1"
+	}
+]

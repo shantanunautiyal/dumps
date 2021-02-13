@@ -1,0 +1,31 @@
+<permissions>
+    <feature name="oppo.feature.19631" />
+    <feature name="android.hardware.fingerprint" />
+    <feature name="oppo.back.touch.fingerprint.sensor" />
+    <!--feature name="oppo.hardware.fingerprint.optical.support" /-->
+    <!-- Xiaori.Yuan@PSW.Multimedia.Display.Service.Feature, 2018/05/22, Add for roundcorner -->
+    <feature name="oppo.roundcorner.support" />
+    <!-- Xiaori.Yuan@Display.Service.Feature, 2018/05/24, Add this for protect eyes -->
+    <feature name="oppo.eyeprotect.support" />
+    <!-- Xiaori.Yuan@Display.Service.Feature, 2018/07/27, Add this for fingerprint -->
+    <feature name="oppo.fingerprint.disable.dimlayer" />
+    <!-- YaoJun.Luo@ROM.SDK, 2018/05/12, add support display compat-->
+    <feature name="oppo.display.compat.support" />
+    <feature name="com.oppo.feature.screen.heteromorphism" />
+    <!-- Jinzhu.Han@MM.Display.Feature, 2019/05/24, add for dynamic cabc level-->
+    <feature name="cabc.level.dynamic.enable" />    
+    <!-- YunRui.Chen@RM.BSP.TP, 2019/05/20, Add for blackgesture -->
+    <feature name="oppo.lcd.first.tp.last.support"/>
+    <!-- DunHui.Ye@PSW.RM.Android, 2019/04/23, add for low memory -->
+    <feature name="oppo.lowramclear.support" />
+    <feature name="oppo.rom.lowram.support" />
+    <!-- Wenkan.Zhu@PSW.CN.WiFi.Network.internet.1800709, 2019/01/24, Add for private feature -->
+    <feature name="oppo.wlan.privateDns.support" />
+    <!-- xuegui.bao@cam.drv, 2019/06/08, add for fingerprint keymode -->
+    <feature name="oppo.camera.fingerprint.shutter" />
+    <!-- Nan.Lu@ROM_realme.App, 2019/07/19, Add oppo.memory.unit.in.thousand for newly-opened project -->
+    <!-- All newly-opened (not OTA) realme projects need to configure this feature -->
+    <feature name="oppo.memory.unit.in.thousand"/>
+    <!-- nitin.misra@APP.DocVault, 13/04/2020, Adding the feature check for DocVault entry in Gallery  -->
+    <feature name="oppo.docvault.support" />
+</permissions>

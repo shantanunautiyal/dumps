@@ -1,0 +1,5 @@
+<!-- This file is auto-generated.  DO NOT MODIFY. -->
+<permissions>
+    <!-- yangmingjin@BSP, 2019/07/17, add for hypnus benchmark perf mode  support-->
+    <feature name="realme.hypnus.perf.benchmark.support"/>
+</permissions>
